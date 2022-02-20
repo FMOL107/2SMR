@@ -1,0 +1,14 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+    text-align: center;
+}
+span.intro {
+    color: blue;
+    font-size: 140%;
+    font-family: 'Times New Roman', Times, serif;
+}
+tr, td, th {
+    border: black 1px solid;
+}

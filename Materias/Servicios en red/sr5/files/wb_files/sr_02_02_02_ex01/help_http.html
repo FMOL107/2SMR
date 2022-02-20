@@ -1,0 +1,69 @@
+<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #408080; font-style: italic">#####################</span>
+<span style="color: #408080; font-style: italic"># Interfaces de red #</span>
+<span style="color: #408080; font-style: italic">#####################</span>
+
+<span style="color: #408080; font-style: italic">#EDIT /etc/network/interfaces (configurar los parámetros estáticos de la interfaz eth0: IP 192.168.5.240/24, gateway 192.168.5.1, servidores de nombres 192.168.5.1 y 8.8.8.8)</span>
+auto eth0
+iface eth0 inet static
+    address 192.168.5.240
+    netmask 255.255.255.0
+    gateway 192.168.5.1
+    dns-nameservers 192.168.5.1 8.8.8.8
+
+<span style="color: #408080; font-style: italic">#EDIT /etc/network/interfaces (configurar los parámetros de la interfaz eth0 utilizando un cliente DHCP)</span>
+auto eth0
+iface eth0 inet dhcp
+
+<span style="color: #408080; font-style: italic">#Deshabilitar y habilitar la interfaz de red eth0, configurando los parámetros establecidos en /etc/network/interfaces</span>
+ifdown eth0
+ifup eth0
+
+<span style="color: #408080; font-style: italic">#################</span>
+<span style="color: #408080; font-style: italic"># Servicio HTTP #</span>
+<span style="color: #408080; font-style: italic">#################</span>
+
+<span style="color: #408080; font-style: italic">#Instalar Apache</span>
+apt-get install apache2 
+
+<span style="color: #408080; font-style: italic">#EDIT /etc/apache2/sites-available/000-default.conf (establecer la carpeta raíz para el site predeterminado)</span>
+DocumentRoot /var/www/html
+
+<span style="color: #408080; font-style: italic">#EDIT /etc/apache2/sites-available/000-default.conf (establecer /var/www/html/protected como subdirectorio protegido con nombres de usuario y contraseñas procedentes del archivo /etc/apache2/passwords; estas líneas deben ir dentro del ámbito de la marca &quot;VirtualHost&quot;)</span>
+&lt;Directory <span style="color: #BA2121">&quot;/var/www/html/protected&quot;</span>&gt;
+    AuthType Basic
+    AuthName <span style="color: #BA2121">&quot;Authentication Required&quot;</span>
+    AuthUserFile <span style="color: #BA2121">&quot;/etc/apache2/passwords&quot;</span>
+    Require valid-user
+    
+    Order allow,deny
+    Allow from all
+&lt;/Directory&gt;
+
+<span style="color: #408080; font-style: italic">#Instalar apache2-utils, incluye programas tales como htpasswd</span>
+apt-get install apache2-utils
+
+<span style="color: #408080; font-style: italic">#Crear archivo de contraseñas /etc/apache2/passwords y añadir el usuario user1</span>
+htpasswd -c /etc/apache2/passwords user1
+
+<span style="color: #408080; font-style: italic">#Añadir el usuario user2 al archivo de contraseñas /etc/apache2/passwords</span>
+htpasswd /etc/apache2/passwords user2
+
+<span style="color: #408080; font-style: italic">#EDIT /etc/apache2/ports.conf (establecer puertos de escucha)</span>
+Listen 81
+
+<span style="color: #408080; font-style: italic">#Habilitar el site configurado en /etc/apache2/sites-available/test_site.conf</span>
+a2ensite test_site
+
+<span style="color: #408080; font-style: italic">#Habilitar el site configurado en /etc/apache2/sites-available/test_site.conf</span>
+<span style="color: #008000">cd</span> /etc/apache2/sites-enabled
+ln -s ../sites-available/test_site.conf
+
+<span style="color: #408080; font-style: italic">#Deshabilitar el site configurado en /etc/apache2/sites-available/test_site.conf</span>
+a2dissite test_site
+
+<span style="color: #408080; font-style: italic">#Deshabilitar el site configurado en /etc/apache2/sites-available/test_site.conf</span>
+rm /etc/apache2/sites-enabled/test_site.conf
+
+<span style="color: #408080; font-style: italic">#Archivos de log por defecto de Apache</span>
+ls /var/log/apache2/
+</pre></div>

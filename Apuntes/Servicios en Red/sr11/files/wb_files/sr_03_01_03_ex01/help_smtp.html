@@ -1,0 +1,120 @@
+<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #408080; font-style: italic">#####################</span>
+<span style="color: #408080; font-style: italic"># Interfaces de red #</span>
+<span style="color: #408080; font-style: italic">#####################</span>
+
+<span style="color: #408080; font-style: italic">#EDIT /etc/network/interfaces (configurar los parámetros estáticos de la interfaz eth0: IP 192.168.5.240/24, gateway 192.168.5.1, servidores de nombres 192.168.5.1 y 8.8.8.8)</span>
+auto eth0
+iface eth0 inet static
+    address 192.168.5.240
+    netmask 255.255.255.0
+    gateway 192.168.5.1
+    dns-nameservers 192.168.5.1 8.8.8.8
+
+<span style="color: #408080; font-style: italic">#EDIT /etc/network/interfaces (configurar los parámetros de la interfaz eth0 utilizando un cliente DHCP)</span>
+auto eth0
+iface eth0 inet dhcp
+
+<span style="color: #408080; font-style: italic">#Deshabilitar y habilitar la interfaz de red eth0, configurando los parámetros establecidos en /etc/network/interfaces</span>
+ifdown eth0
+ifup eth0
+
+<span style="color: #408080; font-style: italic">#################</span>
+<span style="color: #408080; font-style: italic"># Servicio SMTP #</span>
+<span style="color: #408080; font-style: italic">#################</span>
+
+<span style="color: #408080; font-style: italic">#Instalar Postfix</span>
+apt-get install postfix
+
+<span style="color: #408080; font-style: italic">#Reconfigurar Postfix, para generar archivos de configuración de acuerdo con la opción seleccionada y valores proporcionados</span>
+dpkg-reconfigure postfix
+
+<span style="color: #408080; font-style: italic">#EDIT /etc/postfix/main.cf (establecer el nombre de dominio para las cuentas de correo)</span>
+<span style="color: #19177C">mydestination</span><span style="color: #666666">=</span>classroom.org
+
+<span style="color: #408080; font-style: italic">#EDIT /etc/postfix/main.cf (establecer las direcciones IP de los clientes permitidos, para evitar spammers)</span>
+<span style="color: #19177C">mynetworks</span><span style="color: #666666">=</span>192.168.0.0/24
+
+<span style="color: #408080; font-style: italic">#Archivo de log por defecto de Postfix</span>
+cat /var/log/mail.log
+
+<span style="color: #408080; font-style: italic">#Crear usuario user1 sin que pueda iniciar sesión (de manera predeterminada, los usuarios de Postfix son los usuarios estándar del sistema operativo)</span>
+adduser --shell /usr/sbin/nologin user1
+
+<span style="color: #408080; font-style: italic">#Asignar el shell para un usuario existente user1, impidiendo que pueda iniciar sesión</span>
+usermod --shell /usr/sbin/nologin user1
+
+<span style="color: #408080; font-style: italic">#Almacenamiento de correo para user1 en Postfix</span>
+cat /var/mail/user1
+
+<span style="color: #408080; font-style: italic">#Crear almacenamiento de correo para user1 si no lo ha creado Postfix</span>
+touch /var/mail/user1
+chown user1:mail /var/mail/user1
+
+<span style="color: #408080; font-style: italic">#EDIT /etc/aliases (establecer john como alias para user1)</span>
+john: user1
+
+<span style="color: #408080; font-style: italic">#Cargar la base de datos de alias para que sea efectiva</span>
+postalias /etc/aliases
+
+<span style="color: #408080; font-style: italic">#################</span>
+<span style="color: #408080; font-style: italic"># Servicio IMAP #</span>
+<span style="color: #408080; font-style: italic">#################</span>
+
+<span style="color: #408080; font-style: italic">#Instalar Dovecot</span>
+apt-get install dovecot-imapd
+
+<span style="color: #408080; font-style: italic">#EDIT /etc/dovecot/conf.d/10-auth.conf (habilitar autenticación en texto plano, no cifrado)</span>
+<span style="color: #19177C">disable_plaintext_auth</span> <span style="color: #666666">=</span> no
+
+<span style="color: #408080; font-style: italic">#EDIT /etc/dovecot/conf.d/10-ssl.conf (habilitar soporte para IMAPS, indicando además que el certificado se ubica en el archivo /etc/dovecot/dovecot.pem y su clave correspondiente en el archivo /etc/dovecot/private/dovecot.pem)</span>
+<span style="color: #19177C">ssl</span> <span style="color: #666666">=</span> yes
+<span style="color: #19177C">ssl_cert</span> <span style="color: #666666">=</span> /etc/dovecot/dovecot.pem
+<span style="color: #19177C">ssl_key</span> <span style="color: #666666">=</span> /etc/dovecot/private/dovecot.pem
+
+<span style="color: #408080; font-style: italic">#################</span>
+<span style="color: #408080; font-style: italic"># Servicio HTTP #</span>
+<span style="color: #408080; font-style: italic">#################</span>
+
+<span style="color: #408080; font-style: italic">#Instalar Roundcube</span>
+apt-get install roundcube roundcube-sqlite3
+
+<span style="color: #408080; font-style: italic">#EDIT /etc/roundcube/apache.conf (habilitar Roundcube en Apache)</span>
+Alias /roundcube /var/lib/roundcube
+
+<span style="color: #408080; font-style: italic">#EDIT /etc/hosts (establecer alias para el nombre del host para que se accesible)</span>
+127.0.0.1        localhost classroom.org
+
+<span style="color: #408080; font-style: italic">#EDIT /etc/roundcube/config.inc.php (establecer el host por defecto)</span>
+<span style="color: #19177C">$config</span><span style="color: #666666">[</span><span style="color: #BA2121">&#39;default_host&#39;</span><span style="color: #666666">]</span> <span style="color: #666666">=</span> <span style="color: #BA2121">&#39;classroom.org&#39;</span>;
+
+<span style="color: #408080; font-style: italic">#####################</span>
+<span style="color: #408080; font-style: italic"># Cliente de correo #</span>
+<span style="color: #408080; font-style: italic">#####################</span>
+
+<span style="color: #408080; font-style: italic">#Instalar mailx</span>
+apt-get install heirloom-mailx
+
+<span style="color: #408080; font-style: italic">#Enviar un correo electrónico utilizando el servidor 192.168.0.200:25 como servicio SMTP (usuario john, contraseña john, sin SSL), de john@classroom.org a mary@classroom.org</span>
+<span style="color: #008000">echo </span>Hola mundo | mail -s <span style="color: #BA2121">&quot;Correo de prueba&quot;</span> <span style="color: #BB6622; font-weight: bold">\</span>
+   -S <span style="color: #19177C">from</span><span style="color: #666666">=</span>john@classroom.org  <span style="color: #BB6622; font-weight: bold">\</span>
+   -S <span style="color: #19177C">smtp</span><span style="color: #666666">=</span>192.168.0.200:25    <span style="color: #BB6622; font-weight: bold">\</span>
+   -S smtp-auth-user<span style="color: #666666">=</span>john      <span style="color: #BB6622; font-weight: bold">\</span>
+   -S smtp-auth-password<span style="color: #666666">=</span>john  <span style="color: #BB6622; font-weight: bold">\</span>
+mary@classroom.org
+
+<span style="color: #408080; font-style: italic">#Enviar un correo electrónico utilizando el servidor smtp.gmx.com:587 como servicio SMTP (usuario peter@gmx.es, contraseña petpw, con SSL), de peter@classroom.org a mary@gmail.com</span>
+<span style="color: #008000">echo </span>Hola mundo | mailx -s <span style="color: #BA2121">&quot;Correo de prueba&quot;</span> <span style="color: #BB6622; font-weight: bold">\</span>
+   -S smtp-use-starttls             <span style="color: #BB6622; font-weight: bold">\</span>
+   -S ssl-verify<span style="color: #666666">=</span>ignore             <span style="color: #BB6622; font-weight: bold">\</span>
+   -S smtp-auth<span style="color: #666666">=</span>login               <span style="color: #BB6622; font-weight: bold">\</span>
+   -S <span style="color: #19177C">smtp</span><span style="color: #666666">=</span>smtp://smtp.gmx.com:587  <span style="color: #BB6622; font-weight: bold">\</span>
+   -S <span style="color: #19177C">from</span><span style="color: #666666">=</span>peter@gmx.es             <span style="color: #BB6622; font-weight: bold">\</span>
+   -S smtp-auth-user<span style="color: #666666">=</span>peter@gmx.es   <span style="color: #BB6622; font-weight: bold">\</span>
+   -S smtp-auth-password<span style="color: #666666">=</span>petpw      <span style="color: #BB6622; font-weight: bold">\</span>
+mary@gmail.com
+
+<span style="color: #408080; font-style: italic">#Obtener mensajes utilizando el servidor 192.168.0.200:143 como servicio IMAP (usuario mary, contraseña marypw)</span>
+<span style="color: #008000">echo </span>marypw | mailx <span style="color: #BB6622; font-weight: bold">\</span>
+   -S imap-auth<span style="color: #666666">=</span>login                       <span style="color: #BB6622; font-weight: bold">\</span>
+   -S <span style="color: #19177C">folder</span><span style="color: #666666">=</span>imap://mary@192.168.0.200:143
+</pre></div>

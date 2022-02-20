@@ -1,0 +1,51 @@
+[(null) 4434: Main Thread]: I/SMTP SMTP Connecting to: mail.gmx.com:465
+[(null) 4434: Main Thread]: I/SMTP SMTP entering state: 0
+[(null) 4434: Main Thread]: I/SMTP SMTP Response: 220 gmx.com (mrgmx105) Nemesis ESMTP Service ready
+[(null) 4434: Main Thread]: I/SMTP SMTP entering state: 14
+[(null) 4434: Main Thread]: I/SMTP SMTP Send: EHLO [192.168.0.109]
+[(null) 4434: Main Thread]: I/SMTP SMTP entering state: 0
+[(null) 4434: Main Thread]: I/SMTP SMTP Response: 250-gmx.com Hello [192.168.0.109] [79.146.173.188]
+[(null) 4434: Main Thread]: I/SMTP SMTP entering state: 0
+[(null) 4434: Main Thread]: I/SMTP SMTP Response: 250-8BITMIME
+[(null) 4434: Main Thread]: I/SMTP SMTP entering state: 0
+[(null) 4434: Main Thread]: I/SMTP SMTP Response: 250-AUTH LOGIN PLAIN
+[(null) 4434: Main Thread]: I/SMTP SMTP entering state: 0
+[(null) 4434: Main Thread]: I/SMTP SMTP Response: 250 SIZE 69920427
+[(null) 4434: Main Thread]: I/SMTP SMTP entering state: 4
+[(null) 4434: Main Thread]: I/SMTP SMTP entering state: 21
+[(null) 4434: Main Thread]: D/SMTP SMTP auth: server caps 0x20330, pref 0x300, failed 0x0, avail caps 0x300
+[(null) 4434: Main Thread]: D/SMTP (GSSAPI = 0x800, CRAM = 0x2000, NTLM = 0x4000, MSN =  0x8000, PLAIN = 0x200, LOGIN = 0x100, EXTERNAL = 0x400)
+[(null) 4434: Main Thread]: D/SMTP trying auth method 0x200
+[(null) 4434: Main Thread]: I/SMTP SMTP entering state: 16
+[(null) 4434: Main Thread]: D/SMTP SMTP AuthLoginStep1() for francolarrea02@gmx.es@mail.gmx.com
+[(null) 4434: Main Thread]: D/SMTP PLAIN auth
+[(null) 4434: Main Thread]: I/SMTP Logging suppressed for this command (it probably contained authentication information)
+[(null) 4434: Main Thread]: I/SMTP SMTP entering state: 0
+[(null) 4434: Main Thread]: I/SMTP SMTP Response: 235 Authentication succeeded
+[(null) 4434: Main Thread]: I/SMTP SMTP entering state: 18
+[(null) 4434: Main Thread]: D/SMTP SMTP Login response, code 235
+[(null) 4434: Main Thread]: I/SMTP SMTP entering state: 3
+[(null) 4434: Main Thread]: I/SMTP SMTP Send: MAIL FROM:<francolarrea02@gmx.es> BODY=8BITMIME SIZE=420
+[(null) 4434: Main Thread]: I/SMTP SMTP entering state: 0
+[(null) 4434: Main Thread]: I/SMTP SMTP Response: 250 Requested mail action okay, completed
+[(null) 4434: Main Thread]: I/SMTP SMTP entering state: 5
+[(null) 4434: Main Thread]: I/SMTP SMTP Send: RCPT TO:<cristo7282@gmx.es>
+[(null) 4434: Main Thread]: I/SMTP SMTP entering state: 0
+[(null) 4434: Main Thread]: I/SMTP SMTP Response: 250 OK
+[(null) 4434: Main Thread]: I/SMTP SMTP entering state: 6
+[(null) 4434: Main Thread]: I/SMTP SMTP Send: DATA
+[(null) 4434: Main Thread]: I/SMTP SMTP entering state: 0
+[(null) 4434: Main Thread]: I/SMTP SMTP Response: 354 Start mail input; end with <CRLF>.<CRLF>
+[(null) 4434: Main Thread]: I/SMTP SMTP entering state: 7
+[(null) 4434: Main Thread]: I/SMTP SMTP entering state: 8
+[(null) 4434: Main Thread]: I/SMTP SMTP Send: .
+[(null) 4434: Main Thread]: I/SMTP SMTP entering state: 0
+[(null) 4434: Main Thread]: I/SMTP SMTP Response: 250 Requested mail action okay, completed: id=1McY8T-1jYRNK1S8r-00d1aI
+[(null) 4434: Main Thread]: I/SMTP SMTP entering state: 9
+[(null) 4434: Main Thread]: I/SMTP SMTP Send: QUIT
+[(null) 4434: Main Thread]: I/SMTP SMTP entering state: 0
+[(null) 4434: Main Thread]: I/SMTP SMTP entering state: 0
+[(null) 4434: Main Thread]: I/SMTP SMTP Response: 221 gmx.com Service closing transmission channel
+[(null) 4434: Main Thread]: I/SMTP SMTP entering state: 10
+[(null) 4434: Main Thread]: I/SMTP SMTP entering state: 12
+[(null) 4434: Main Thread]: I/SMTP SMTP connection error quitting 804b0002, ignoring 

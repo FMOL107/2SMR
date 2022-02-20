@@ -1,0 +1,6 @@
+En el servidor activamos el modo detallado y lo ponemos a escuchar por el puerto 5555. ***nc -v -l -p 5555 -e /bin/bash***
+
+En el cliente ejecutamos la orden y se la mandamos al programa netcat. 
+
+ - ***nc 192.168.0.244 5555***
+ - ***ls****

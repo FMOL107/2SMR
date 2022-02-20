@@ -1,0 +1,3 @@
+Podemos observar con wireshark que tanto el usuario como las contraseñas salen en texto plano.
+
+Estando una letra en cada paquete.

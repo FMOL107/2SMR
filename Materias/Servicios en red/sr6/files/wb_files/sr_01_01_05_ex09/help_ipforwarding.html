@@ -1,0 +1,53 @@
+<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #408080; font-style: italic">#####################</span>
+<span style="color: #408080; font-style: italic"># Interfaces de red #</span>
+<span style="color: #408080; font-style: italic">#####################</span>
+
+<span style="color: #408080; font-style: italic">#EDIT /etc/network/interfaces (configurar los parámetros estáticos de la interfaz eth0: IP 192.168.5.240/24, gateway 192.168.5.1, servidores de nombres 192.168.5.1 y 8.8.8.8)</span>
+auto eth0
+iface eth0 inet static
+    address 192.168.5.240
+    netmask 255.255.255.0
+    gateway 192.168.5.1
+    dns-nameservers 192.168.5.1 8.8.8.8
+
+<span style="color: #408080; font-style: italic">#Deshabilitar y habilitar la interfaz de red eth0, configurando los parámetros establecidos en /etc/network/interfaces</span>
+ifdown eth0
+ifup eth0
+
+<span style="color: #408080; font-style: italic">######################</span>
+<span style="color: #408080; font-style: italic"># Enrutamiento y NAT #</span>
+<span style="color: #408080; font-style: italic">######################</span>
+
+<span style="color: #408080; font-style: italic">#EDIT /etc/sysctl.conf (establecer el reenvío de forma persistente)</span>
+net.ipv4.ip_forward<span style="color: #666666">=</span>1
+
+<span style="color: #408080; font-style: italic">#Cargar el contenido de /etc/sysctl.conf en la memoria del kernel</span>
+sysctl -p
+
+<span style="color: #408080; font-style: italic">#Establecer NAT a través de la interfaz eth0 (no es persistente)</span>
+iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+
+<span style="color: #408080; font-style: italic">#Hacer persistentes las reglas de iptables</span>
+apt-get install iptables-persistent
+iptables-save &gt; /etc/iptables/rules.v4
+
+<span style="color: #408080; font-style: italic">#Compruebar las reglas NAT</span>
+iptables -t nat -L
+
+<span style="color: #408080; font-style: italic">#############</span>
+<span style="color: #408080; font-style: italic"># Navegador #</span>
+<span style="color: #408080; font-style: italic">#############</span>
+
+<span style="color: #408080; font-style: italic">#Descargar la página predeterminada del servidor es.wikipedia.org</span>
+wget es.wikipedia.org
+
+<span style="color: #408080; font-style: italic">###########</span>
+<span style="color: #408080; font-style: italic"># Captura #</span>
+<span style="color: #408080; font-style: italic">###########</span>
+
+<span style="color: #408080; font-style: italic">#Instalar la herramienta de captura de tráfico</span>
+apt-get install tcpdump
+
+<span style="color: #408080; font-style: italic">#Capturar encabezados enviados o recibidos a través de eth0</span>
+tcpdump -i eth0 &gt; capture.txt
+</pre></div>

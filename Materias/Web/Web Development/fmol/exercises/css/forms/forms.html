@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>REGISTRATION FORMS</title>
+        <meta charset="utf-8"/>
+        <meta name="author" content="FMOL107"/>
+        <link type="text/css" rel="stylesheet" href="./css/forms.css"/>
+    </head>
+
+    <body>
+
+        <header>
+            <h1>Registration Form</h1>
+        </header>
+
+        <form action="https://fmolsite.online" method="GET">
+
+            <fieldset id="idenfication">
+                <legend>Identification</legend>  
+                User <input type="text" id="text"/><br/>          
+                Password <input type="password" id="password"/><br/>
+                Repeat password <input type="password" id="passwordconf"/><br/>
+            </fieldset>
+
+            <fieldset id="personal_info">
+                <legend>Personal Information</legend>
+                Name <input type="text" id="text2"/><br/>
+                Birthday <input type="date" id="date"/><br/>
+                Favorite color <input type="color" id="favcolor"/><br/>
+            </fieldset>
+
+            <fieldset id="studies">
+                <legend>Academical Information</legend>
+
+                Studies finished <select name="studies_finished" id="studies_finished">
+                    <option value="primary_studies" selected="selected">Primary Studies</option>
+                    <option value="secondary_studies">Secondary Studies</option>
+                    <option value="vocational_studies">Vocational Studies</option>
+                    <option value="degree">Degree</option>
+                    <option value="master">Master</option>
+                </select>
+                <br/>
+
+                <input type="radio" name="level"
+                value="A1" checked="checked" id="button1"/> A1 <br/>
+
+                <input type="radio" name="level"
+                value="A2" id="button2"/> A2 <br/>
+
+                <input type="radio" name="level"
+                value="B1" id="button3"/> B1 <br/>
+
+                <input type="radio" name="level"
+                value="B2" id="button4"/> B2 
+
+            </fieldset>
+
+            <fieldset id="about">
+                <legend>You want to receive information about</legend>
+                <input type="checkbox" name="games" id="games"/> Games
+                <input type="checkbox" name="sports" id="sports"/> Sports
+                <input type="checkbox" name="health" id="health"/> Health <br/>
+                <input type="checkbox" name="computer" id="computer"/> Computer
+                <input type="checkbox" name="politics" id="politics"/> Politics
+            </fieldset>
+        
+            <fieldset id="bot">
+                <input type="submit" value="Send" 
+                name="submit" id="send"/>
+                <input type="reset" value="Reset" 
+                name="reset" id="reset"/>
+            </fieldset>
+        </form>
+        <footer>
+            Author: FMOL107
+        </footer>
+        <p>
+            <a title="Back to css exercises" href="./../../../html/exercicescss.html">
+                Back to CSS exercises
+            </a>
+        </p>
+    </body>
+</html>

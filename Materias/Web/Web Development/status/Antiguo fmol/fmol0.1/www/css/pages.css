@@ -1,0 +1,73 @@
+@font-face {
+    font-family: "Playfair Display";
+            src: url(./fonts/PlayFairDisplay/PlayfairDisplaySC-Regular.ttf)
+}
+@font-face {
+    font-family: "Merriweather";
+            src: url(./fonts/Merriweather/Merriweather-Regular.ttf)
+}
+body {
+    font-size: medium;
+    background-color: #b7ebaa;
+    display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "up up"
+                             "menu menu"
+                             "principal principal"
+                             "footer footer";
+}
+header {
+    padding: 30px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #c1f9a2;
+    grid-area: up;
+}
+nav {
+    background-color: #90ee90;
+    text-align: center;
+    border: 1px solid black;
+    grid-area: menu;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "hover";
+}
+nav a {
+    text-decoration: none;
+    color: black;
+    padding: 15px;  
+}
+nav a:hover {
+    background-color: #a8e4a0;
+    grid-area: hover;
+}
+h1, h2 {
+    font-family: "Bebas Neue";
+}
+ol {
+    grid-area: principal;
+    border: 1px solid black;
+    list-style: none;   
+    padding: 0px;
+    text-align: center;
+}
+li {
+    color: green;
+    font-family: "Merriweather";
+    border-bottom: 1px solid black;
+    border-top: 1px solid #b7ebaa;
+    background: #b7ebaa;
+}
+li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 3px;
+}
+li a:hover {
+    background-color: #a8e4a0;
+   
+}
+footer {
+    grid-area: footer;
+}

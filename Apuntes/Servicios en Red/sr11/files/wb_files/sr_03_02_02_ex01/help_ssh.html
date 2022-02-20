@@ -1,0 +1,71 @@
+<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #408080; font-style: italic">#####################</span>
+<span style="color: #408080; font-style: italic"># Interfaces de red #</span>
+<span style="color: #408080; font-style: italic">#####################</span>
+
+<span style="color: #408080; font-style: italic">#EDIT /etc/network/interfaces (configurar los parámetros estáticos de la interfaz eth0: IP 192.168.5.240/24, gateway 192.168.5.1, servidores de nombres 192.168.5.1 y 8.8.8.8)</span>
+auto eth0
+iface eth0 inet static
+    address 192.168.5.240
+    netmask 255.255.255.0
+    gateway 192.168.5.1
+    dns-nameservers 192.168.5.1 8.8.8.8
+
+<span style="color: #408080; font-style: italic">#EDIT /etc/network/interfaces (configurar los parámetros de la interfaz eth0 utilizando un cliente DHCP)</span>
+auto eth0
+iface eth0 inet dhcp
+
+<span style="color: #408080; font-style: italic">#Deshabilitar y habilitar la interfaz de red eth0, configurando los parámetros establecidos en /etc/network/interfaces</span>
+ifdown eth0
+ifup eth0
+
+<span style="color: #408080; font-style: italic">################</span>
+<span style="color: #408080; font-style: italic"># Servicio SSH #</span>
+<span style="color: #408080; font-style: italic">################</span>
+
+<span style="color: #408080; font-style: italic">#Instalar OpenSSH</span>
+apt-get install openssh-server
+
+<span style="color: #408080; font-style: italic">#EDIT /etc/ssh/sshd_config (habilitar la autenticación de clave pública)</span>
+RSAAuthentication yes
+PubkeyAuthentication yes
+
+<span style="color: #408080; font-style: italic">#EDIT /etc/ssh/sshd_config (habilitar el reenvío X11)</span>
+X11Forwarding yes
+
+<span style="color: #408080; font-style: italic">#Crear usuario user1</span>
+adduser user1
+
+<span style="color: #408080; font-style: italic">#Mostrar quién está logueado local o remotamente</span>
+who
+
+<span style="color: #408080; font-style: italic">#Obtener listado de los últimos usuarios logueados</span>
+last
+
+<span style="color: #408080; font-style: italic">#Obtener la lista de los últimos usuarios logueados, incluyendo los intentos fallidos</span>
+lastb
+
+<span style="color: #408080; font-style: italic">#Obtener la fecha y hora de inicio de sesión más reciente de cada usuario</span>
+lastlog
+
+<span style="color: #408080; font-style: italic">###############</span>
+<span style="color: #408080; font-style: italic"># Cliente SSH #</span>
+<span style="color: #408080; font-style: italic">###############</span>
+
+<span style="color: #408080; font-style: italic">#Generar un par de claves, por defecto en ~/.ssh/id_rsa.pub (pública) y ~/.ssh/id_rsa (privada)</span>
+ssh-key
+
+<span style="color: #408080; font-style: italic">#Transferir la clave pública, por defecto en ~/.ssh/id_rsa.pub, a un servidor SSH (dado el usuario user1 en el servidor host1); la clave pública se añadirá de forma predeterminada al archivo  ~/.ssh/authorized_keys del servidor, y ya no se requerirá contraseña para la autenticación</span>
+ssh-copy-id user1@host1
+
+<span style="color: #408080; font-style: italic">#Iniciar sesión desde un terminal remoto en el servidor host1 como usuario user1</span>
+ssh user1@host1
+
+<span style="color: #408080; font-style: italic">#Iniciar sesión desde un terminal remoto en el servidor host1 como usuario user1, habilitando el reenvío de mensajes X11 al cliente (el cliente debe ejecutar un servidor X)</span>
+ssh -X user1@host1
+
+<span style="color: #408080; font-style: italic">#Ejecutar el comando ls en el servidor host1 como usuario usuario1</span>
+ssh user1@host1 ls
+
+<span style="color: #408080; font-style: italic">#Iniciar sesión desde un terminal remoto en el servidor host1 como usuario user1, reenviando datos desde el puerto local 8888 al puerto remoto 80</span>
+ssh -L 127.0.0.1:8888:127.0.0.1:80 user1@host1
+</pre></div>

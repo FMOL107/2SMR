@@ -1,0 +1,26 @@
+ Connecting to: mail.gmx.com:465
+ Response: 220 gmx.com (mrgmx105) Nemesis ESMTP Service ready
+ Send: EHLO [192.168.0.109]
+ Response: 250-gmx.com Hello [192.168.0.109] [79.146.173.188]
+ Response: 250-8BITMIME
+ Response: 250-AUTH LOGIN PLAIN
+ Response: 250 SIZE 69920427
+ auth: server caps 0x20330, pref 0x300, failed 0x0, avail caps 0x300
+API = 0x800, CRAM = 0x2000, NTLM = 0x4000, MSN =  0x8000, PLAIN = 0x200, LOGIN = 0x100, EXTERNAL = 0x400)
+ng auth method 0x200
+ AuthLoginStep1() for francolarrea02@gmx.es@mail.gmx.com
+N auth
+ing suppressed for this command (it probably contained authentication information)
+ Response: 235 Authentication succeeded
+ Login response, code 235
+ Send: MAIL FROM:<francolarrea02@gmx.es> BODY=8BITMIME SIZE=420
+ Response: 250 Requested mail action okay, completed
+ Send: RCPT TO:<cristo7282@gmx.es>
+ Response: 250 OK
+ Send: DATA
+ Response: 354 Start mail input; end with <CRLF>.<CRLF>
+ Send: .
+ Response: 250 Requested mail action okay, completed: id=1McY8T-1jYRNK1S8r-00d1aI
+ Send: QUIT
+ Response: 221 gmx.com Service closing transmission channel
+ connection error quitting 804b0002, ignoring 

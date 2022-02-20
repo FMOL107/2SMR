@@ -1,0 +1,16 @@
+table, td, th {
+    border: 1px solid black;
+}
+h1 {
+    text-align: center;
+    background-color: purple;
+}
+th {
+    color: blue;
+}
+td {
+    color: gray;
+}
+td.yellow {
+    color: yellowgreen;
+}

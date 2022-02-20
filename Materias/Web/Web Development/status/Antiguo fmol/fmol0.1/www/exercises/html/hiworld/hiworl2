@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+0 nombre
+@ lista pausa
+* lista
+# numero
+-gt
+-lt
+-d
+-f normal
+-e
+-s vacio
+-z vacia
+-n no vacia
+break
+continue
+var=`expr $var1 \* $var2`

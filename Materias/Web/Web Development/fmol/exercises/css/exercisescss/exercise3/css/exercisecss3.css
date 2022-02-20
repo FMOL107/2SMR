@@ -1,0 +1,58 @@
+#cabecera {
+    border: 0;
+    padding: 1em 1em;
+    border: solid;
+}
+#menu, #lateral, #principal, #secundario, #pie {
+    border: solid;
+}
+#logo {
+    float: left;
+}
+#buscador {
+    float: right;
+}
+.clear {
+    clear: both;
+}
+#menu {
+    padding: 0.5em 0.5em;
+    margin-bottom: 0.5em;
+}
+#menu #menu_principal li{
+    display: inline;
+}
+#lateral {
+    float: left;
+    width: 185px;
+}
+.imagen {
+    float: left;
+}
+#lateral #noticias li {
+    list-style: none;
+}
+#contenido #principal{
+    float: left;
+    width: 800px;
+}
+#contenido #secundario {
+    float: right;
+    width: 150px;
+}
+#noticias, #publicidad, #principal, #secundario {
+    padding: 0.5em 0.5em;
+}
+#publicidad {
+    margin-top: 1em;
+}
+#pie {
+    padding: 0.5em;
+    margin-top: 1em;
+}
+.articulo {
+    margin: 1em;
+}
+img {
+    margin: 0.5em;
+}

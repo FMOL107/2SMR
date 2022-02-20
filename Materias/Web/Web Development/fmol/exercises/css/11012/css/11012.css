@@ -1,0 +1,25 @@
+table, td, th {
+    border: 1px solid black;
+}
+th   {
+color: gray;
+}
+td.security {
+    color: green;
+}
+td.web {
+    color: blue;
+}
+td.business {
+    color: orange;
+}
+td.services {
+    color: red;
+}
+td.systems {
+    color: purple;
+}
+td.break {
+    color: black;
+}
+

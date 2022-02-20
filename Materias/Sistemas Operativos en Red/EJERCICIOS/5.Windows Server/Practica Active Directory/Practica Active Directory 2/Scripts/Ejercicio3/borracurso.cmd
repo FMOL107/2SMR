@@ -1,0 +1,1 @@
+dsrm ou=CURSO,dc=flarrea,dc=com -subtree -noprompt

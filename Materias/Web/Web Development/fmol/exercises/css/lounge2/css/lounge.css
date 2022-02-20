@@ -1,0 +1,92 @@
+body {
+    font-size: small;
+    font-family: Arial, Helvetica, Verdana;
+    line-height: 1.6em;
+    font-style: italic;
+    color: #444444;
+}
+h1, h2 {
+    color: #007e7e;
+}
+h2 {
+    font-size: 130%;
+}
+h1 {
+    font-size: 150%;
+}
+#guarantee {
+    line-height: 1.9em;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #444444;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    background-color: #a7cece;
+    padding: 25px;
+    padding-left: 80px;
+    margin: 30px;
+    margin-right: 250px;
+    background-image: url(../images/background.gif);
+    background-repeat: no-repeat;
+    background-position: top left;
+    border-style: dashed;
+    border-color: whitesmoke;
+}
+@media screen and (min-device-width: 481px) {
+    #guarantee {
+        margin-right: 250px;
+    }
+}
+@media screen and (max-device-width: 480px) {
+    #guarantee {
+        margin-right: 30px;
+    }
+}
+@media print {
+    body {
+        font-family: 'Times New Roman', Times, serif;
+    }
+}
+#elixirs {
+    line-height: 1;
+    border-width: thin;
+    border-style: solid;
+    border-color: #007e7e;
+    width: 200px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    margin-left: 20px;
+    text-align: center;
+    background-image: url(../images/cocktail.gif);
+    background-repeat: repeat-x;
+}
+#elixirs h2 {
+    color: black;
+}
+#elixirs h3 {
+    color: #d12c47
+}
+#elixirs a:link {
+    color: #007e7e;
+}
+#elixirs a:visited {
+    color: #333333;
+}
+#elixirs a:hover {
+    background: #f88396;
+    color: #0d5353;
+}
+#elixirs a {
+    text-decoration: none;
+}
+.cd {
+    font-style: italic;
+}
+.artist {
+    font-weight: bold;
+}
+#elixirs {
+    float: right;
+}

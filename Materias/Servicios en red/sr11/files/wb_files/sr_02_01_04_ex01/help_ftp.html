@@ -1,0 +1,81 @@
+<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #408080; font-style: italic">#####################</span>
+<span style="color: #408080; font-style: italic"># Interfaces de red #</span>
+<span style="color: #408080; font-style: italic">#####################</span>
+
+<span style="color: #408080; font-style: italic">#EDIT /etc/network/interfaces (configurar los parámetros estáticos de la interfaz eth0: IP 192.168.5.240/24, gateway 192.168.5.1, servidores de nombres 192.168.5.1 y 8.8.8.8)</span>
+auto eth0
+iface eth0 inet static
+    address 192.168.5.240
+    netmask 255.255.255.0
+    gateway 192.168.5.1
+    dns-nameservers 192.168.5.1 8.8.8.8
+
+<span style="color: #408080; font-style: italic">#EDIT /etc/network/interfaces (configurar los parámetros de la interfaz eth0 utilizando un cliente DHCP)</span>
+auto eth0
+iface eth0 inet dhcp
+
+<span style="color: #408080; font-style: italic">#Deshabilitar y habilitar la interfaz de red eth0, configurando los parámetros establecidos en /etc/network/interfaces</span>
+ifdown eth0
+ifup eth0
+
+<span style="color: #408080; font-style: italic">################</span>
+<span style="color: #408080; font-style: italic"># Servicio FTP #</span>
+<span style="color: #408080; font-style: italic">################</span>
+
+<span style="color: #408080; font-style: italic">#Instalar Vsftpd</span>
+apt-get install vsftpd
+
+<span style="color: #408080; font-style: italic">#EDIT /etc/vsftpd.conf (habilitar usuarios locales como usuarios ftp, los usuarios locales son los del sistema operativo)</span>
+<span style="color: #19177C">local_enable</span><span style="color: #666666">=</span>YES
+
+<span style="color: #408080; font-style: italic">#EDIT /etc/vsftpd.conf (habilitar comandos que impliquen escritura, por ejemplo, STOR)</span>
+<span style="color: #19177C">write_enable</span><span style="color: #666666">=</span>YES
+
+<span style="color: #408080; font-style: italic">#EDIT /etc/vsftpd.conf (por defecto, los usuarios locales no estarán enjaulados; los que si estarán enjaulados son los registrados en /etc/vsftpd.chroot_list)</span>
+<span style="color: #19177C">chroot_local_user</span><span style="color: #666666">=</span>NO
+<span style="color: #19177C">chroot_list_enable</span><span style="color: #666666">=</span>YES
+<span style="color: #19177C">chroot_list_file</span><span style="color: #666666">=</span>/etc/vsftpd.chroot_list
+
+<span style="color: #408080; font-style: italic">#Enjaular user1 (nombre de usuario) para ftp, registrándolo en el archivo /etc/vsftpd.chroot_list establecido previamente en /etc/vsftpd.conf</span>
+<span style="color: #008000">echo </span>user1 &gt;&gt; /etc/vsftpd.chroot_list
+
+<span style="color: #408080; font-style: italic">#EDIT /etc/vsftpd.conf (habilitar FTP anónimo, enjaulado)</span>
+<span style="color: #19177C">anonymous_enable</span><span style="color: #666666">=</span>YES
+
+<span style="color: #408080; font-style: italic">#EDIT /etc/vsftpd.conf (establecer el directorio raíz para los archivos del usuarip FTP anónimo)</span>
+<span style="color: #19177C">anon_root</span><span style="color: #666666">=</span>/var/pub
+
+<span style="color: #408080; font-style: italic">#EDIT /etc/vsftpd.conf (permitir que el usuario FTP anónimo suba archivos)</span>
+<span style="color: #19177C">anon_upload_enable</span><span style="color: #666666">=</span>YES
+
+<span style="color: #408080; font-style: italic">#EDIT /etc/vsftpd.conf (permitir que el usuario FTP anónimo cree subdirectorios)</span>
+<span style="color: #19177C">anon_mkdir_write_enable</span><span style="color: #666666">=</span>YES
+
+<span style="color: #408080; font-style: italic">#EDIT /etc/vsftpd.conf (habilitar modo pasivo, dirección IP pública 192.168.0.40 y puertos del 40000 al 40010)</span>
+<span style="color: #19177C">pasv_enable</span><span style="color: #666666">=</span>YES
+<span style="color: #19177C">pasv_address</span><span style="color: #666666">=</span>192.168.0.40
+<span style="color: #19177C">pasv_min_port</span><span style="color: #666666">=</span>40000
+<span style="color: #19177C">pasv_max_port</span><span style="color: #666666">=</span>40010
+
+<span style="color: #408080; font-style: italic">#Archivo de log por defecto de Vsftpd</span>
+cat /var/log/vsftpd.log
+
+<span style="color: #408080; font-style: italic">#Crear usuario user1 sin que pueda iniciar sesión</span>
+adduser --shell /usr/sbin/nologin user1
+
+<span style="color: #408080; font-style: italic">#Asignar el shell para un usuario existente user1, impidiendo que pueda iniciar sesión</span>
+usermod --shell /usr/sbin/nologin user1
+
+<span style="color: #408080; font-style: italic">#Activar el programa /usr/sbin/nologin como shell</span>
+<span style="color: #008000">echo</span> /usr/sbin/nologin &gt;&gt; /etc/shells
+
+<span style="color: #408080; font-style: italic">#Deshabilitar el acceso en escritura para la carpeta home del usuario user1 y crear una subcarpeta con acceso de escritura (requerido para usuarios enjaulados en Vsftpd)</span>
+mkdir /home/user1/shared
+chown user1:user1 /home/user1/shared
+chmod ugo-w /home/user1
+
+<span style="color: #408080; font-style: italic">#Crear directorio /var/pub para FTP anónimo; el usuario ftp se crea durante la instalación de Vsftpd</span>
+mkdir /var/pub
+chown ftp:ftp /var/pub
+chmod ugo-w /var/pub
+</pre></div>

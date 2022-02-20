@@ -1,0 +1,38 @@
+body {
+    display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "header"
+                             "footer";
+background-color: #b7ebaa;
+
+}
+header {
+    grid-area: header;
+}
+form{
+    display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "ident acadinfo"
+                             "persinfo about"
+                             "reset reset";
+}
+fieldset {
+    margin: 10px;
+}
+#identification {
+    grid-area: ident;
+}
+#personal_info {
+    grid-area: persinfo;
+}
+#studies {
+    grid-area: acadinfo;
+}
+#about {
+    grid-area: about;
+}
+#bot {
+    grid-area: reset;
+    display: flex;
+    justify-content: center;
+}

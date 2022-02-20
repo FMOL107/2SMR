@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+}
+h1 {
+    background-color: blue;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 200%;
+}
+th {
+    background-color: gainsboro;
+}
+th.categories {
+    color: purple;
+}
+article.introduction {
+    background-color: orange;
+    font-family: serif;
+}
+h3.categories {
+    text-align: center;
+}
+h3.winners {
+    text-align: center;
+}
+h3.novel {
+    text-align: center;
+}
+footer {
+    background-color: yellow;
+}

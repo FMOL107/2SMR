@@ -1,0 +1,19 @@
+h1 {
+    color: aquamarine;
+}
+p strong {
+    color: red;
+}
+.destacado {
+    color: orange;
+}
+h2 {
+    color: blue;
+}
+p a {
+    color: red;
+    text-decoration: underline;
+}
+p em {
+    color: blue;
+}

@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?><nmaprun start="1569313757" profile_name="" xmloutputversion="1.04" scanner="nmap" version="7.01" startstr="Tue Sep 24 10:29:17 2019" args="nmap -O 192.168.0.0/24"><scaninfo services="1,3-4,6-7,9,13,17,19-26,30,32-33,37,42-43,49,53,70,79-85,88-90,99-100,106,109-111,113,119,125,135,139,143-144,146,161,163,179,199,211-212,222,254-256,259,264,280,301,306,311,340,366,389,406-407,416-417,425,427,443-445,458,464-465,481,497,500,512-515,524,541,543-545,548,554-555,563,587,593,616-617,625,631,636,646,648,666-668,683,687,691,700,705,711,714,720,722,726,749,765,777,783,787,800-801,808,843,873,880,888,898,900-903,911-912,981,987,990,992-993,995,999-1002,1007,1009-1011,1021-1100,1102,1104-1108,1110-1114,1117,1119,1121-1124,1126,1130-1132,1137-1138,1141,1145,1147-1149,1151-1152,1154,1163-1166,1169,1174-1175,1183,1185-1187,1192,1198-1199,1201,1213,1216-1218,1233-1234,1236,1244,1247-1248,1259,1271-1272,1277,1287,1296,1300-1301,1309-1311,1322,1328,1334,1352,1417,1433-1434,1443,1455,1461,1494,1500-1501,1503,1521,1524,1533,1556,1580,1583,1594,1600,1641,1658,1666,1687-1688,1700,1717-1721,1723,1755,1761,1782-1783,1801,1805,1812,1839-1840,1862-1864,1875,1900,1914,1935,1947,1971-1972,1974,1984,1998-2010,2013,2020-2022,2030,2033-2035,2038,2040-2043,2045-2049,2065,2068,2099-2100,2103,2105-2107,2111,2119,2121,2126,2135,2144,2160-2161,2170,2179,2190-2191,2196,2200,2222,2251,2260,2288,2301,2323,2366,2381-2383,2393-2394,2399,2401,2492,2500,2522,2525,2557,2601-2602,2604-2605,2607-2608,2638,2701-2702,2710,2717-2718,2725,2800,2809,2811,2869,2875,2909-2910,2920,2967-2968,2998,3000-3001,3003,3005-3007,3011,3013,3017,3030-3031,3052,3071,3077,3128,3168,3211,3221,3260-3261,3268-3269,3283,3300-3301,3306,3322-3325,3333,3351,3367,3369-3372,3389-3390,3404,3476,3493,3517,3527,3546,3551,3580,3659,3689-3690,3703,3737,3766,3784,3800-3801,3809,3814,3826-3828,3851,3869,3871,3878,3880,3889,3905,3914,3918,3920,3945,3971,3986,3995,3998,4000-4006,4045,4111,4125-4126,4129,4224,4242,4279,4321,4343,4443-4446,4449,4550,4567,4662,4848,4899-4900,4998,5000-5004,5009,5030,5033,5050-5051,5054,5060-5061,5080,5087,5100-5102,5120,5190,5200,5214,5221-5222,5225-5226,5269,5280,5298,5357,5405,5414,5431-5432,5440,5500,5510,5544,5550,5555,5560,5566,5631,5633,5666,5678-5679,5718,5730,5800-5802,5810-5811,5815,5822,5825,5850,5859,5862,5877,5900-5904,5906-5907,5910-5911,5915,5922,5925,5950,5952,5959-5963,5987-5989,5998-6007,6009,6025,6059,6100-6101,6106,6112,6123,6129,6156,6346,6389,6502,6510,6543,6547,6565-6567,6580,6646,6666-6669,6689,6692,6699,6779,6788-6789,6792,6839,6881,6901,6969,7000-7002,7004,7007,7019,7025,7070,7100,7103,7106,7200-7201,7402,7435,7443,7496,7512,7625,7627,7676,7741,7777-7778,7800,7911,7920-7921,7937-7938,7999-8002,8007-8011,8021-8022,8031,8042,8045,8080-8090,8093,8099-8100,8180-8181,8192-8194,8200,8222,8254,8290-8292,8300,8333,8383,8400,8402,8443,8500,8600,8649,8651-8652,8654,8701,8800,8873,8888,8899,8994,9000-9003,9009-9011,9040,9050,9071,9080-9081,9090-9091,9099-9103,9110-9111,9200,9207,9220,9290,9415,9418,9485,9500,9502-9503,9535,9575,9593-9595,9618,9666,9876-9878,9898,9900,9917,9929,9943-9944,9968,9998-10004,10009-10010,10012,10024-10025,10082,10180,10215,10243,10566,10616-10617,10621,10626,10628-10629,10778,11110-11111,11967,12000,12174,12265,12345,13456,13722,13782-13783,14000,14238,14441-14442,15000,15002-15004,15660,15742,16000-16001,16012,16016,16018,16080,16113,16992-16993,17877,17988,18040,18101,18988,19101,19283,19315,19350,19780,19801,19842,20000,20005,20031,20221-20222,20828,21571,22939,23502,24444,24800,25734-25735,26214,27000,27352-27353,27355-27356,27715,28201,30000,30718,30951,31038,31337,32768-32785,33354,33899,34571-34573,35500,38292,40193,40911,41511,42510,44176,44442-44443,44501,45100,48080,49152-49161,49163,49165,49167,49175-49176,49400,49999-50003,50006,50300,50389,50500,50636,50800,51103,51493,52673,52822,52848,52869,54045,54328,55055-55056,55555,55600,56737-56738,57294,57797,58080,60020,60443,61532,61900,62078,63331,64623,64680,65000,65129,65389" protocol="tcp" numservices="1000" type="syn"></scaninfo><verbose level="0"></verbose><debugging level="0"></debugging><output type="interactive">
+Starting Nmap 7.01 ( https://nmap.org ) at 2019-09-24 10:29 CEST
+Nmap scan report for 192.168.0.1
+Host is up (0.00060s latency).
+Not shown: 995 closed ports
+PORT      STATE    SERVICE
+21/tcp    filtered ftp
+22/tcp    open     ssh
+80/tcp    open     http
+1900/tcp  open     upnp
+20005/tcp open     btx
+MAC Address: 18:D6:C7:90:E5:73 (Unknown)
+Device type: general purpose
+Running: Linux 2.6.X
+OS CPE: cpe:/o:linux:linux_kernel:2.6
+OS details: Linux 2.6.23 - 2.6.38
+Network Distance: 1 hop
+
+Nmap scan report for 192.168.0.2
+Host is up (0.0091s latency).
+Not shown: 996 closed ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+23/tcp  open  telnet
+80/tcp  open  http
+443/tcp open  https
+MAC Address: AC:84:C6:AC:30:59 (Unknown)
+Device type: general purpose
+Running: Linux 2.6.X
+OS CPE: cpe:/o:linux:linux_kernel:2.6
+OS details: Linux 2.6.32 - 2.6.35
+Network Distance: 1 hop
+
+Nmap scan report for 192.168.0.102
+Host is up (0.00053s latency).
+Not shown: 996 closed ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+139/tcp open  netbios-ssn
+445/tcp open  microsoft-ds
+902/tcp open  iss-realsecure
+MAC Address: 50:65:F3:25:2A:31 (Hewlett Packard)
+Device type: general purpose
+Running: Linux 3.X|4.X
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4
+OS details: Linux 3.2 - 4.0
+Network Distance: 1 hop
+
+Nmap scan report for 192.168.0.103
+Host is up (0.0031s latency).
+All 1000 scanned ports on 192.168.0.103 are filtered
+MAC Address: 80:2B:F9:19:6D:6F (Unknown)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 1 hop
+
+Nmap scan report for 192.168.0.104
+Host is up (0.0015s latency).
+Not shown: 999 filtered ports
+PORT     STATE SERVICE
+5357/tcp open  wsdapi
+MAC Address: 08:00:27:09:67:8D (Oracle VirtualBox virtual NIC)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: specialized|general purpose
+Running (JUST GUESSING): AVtech embedded (87%), FreeBSD 6.X (86%), Microsoft Windows XP (85%)
+OS CPE: cpe:/o:freebsd:freebsd:6.3 cpe:/o:microsoft:windows_xp::sp2
+Aggressive OS guesses: AVtech Room Alert 26W environmental monitor (87%), FreeBSD 6.3-RELEASE (86%), Microsoft Windows XP SP2 (85%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+
+Nmap scan report for 192.168.0.105
+Host is up (0.00068s latency).
+Not shown: 996 closed ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+139/tcp open  netbios-ssn
+445/tcp open  microsoft-ds
+902/tcp open  iss-realsecure
+MAC Address: 50:65:F3:27:AA:33 (Hewlett Packard)
+Device type: general purpose
+Running: Linux 3.X|4.X
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4
+OS details: Linux 3.2 - 4.0
+Network Distance: 1 hop
+
+Nmap scan report for 192.168.0.108
+Host is up (0.00065s latency).
+All 1000 scanned ports on 192.168.0.108 are closed
+MAC Address: 08:00:27:67:94:CD (Oracle VirtualBox virtual NIC)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 1 hop
+
+Nmap scan report for 192.168.0.109
+Host is up (0.00039s latency).
+Not shown: 996 closed ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+139/tcp open  netbios-ssn
+445/tcp open  microsoft-ds
+902/tcp open  iss-realsecure
+MAC Address: 50:65:F3:27:A7:86 (Hewlett Packard)
+Device type: general purpose
+Running: Linux 3.X|4.X
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4
+OS details: Linux 3.2 - 4.0
+Network Distance: 1 hop
+
+Nmap scan report for 192.168.0.111
+Host is up (0.00060s latency).
+Not shown: 996 closed ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+139/tcp open  netbios-ssn
+445/tcp open  microsoft-ds
+902/tcp open  iss-realsecure
+MAC Address: 50:65:F3:2E:00:69 (Hewlett Packard)
+Device type: general purpose
+Running: Linux 3.X|4.X
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4
+OS details: Linux 3.2 - 4.0
+Network Distance: 1 hop
+
+Nmap scan report for 192.168.0.112
+Host is up (0.00047s latency).
+Not shown: 996 closed ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+139/tcp open  netbios-ssn
+445/tcp open  microsoft-ds
+902/tcp open  iss-realsecure
+MAC Address: 50:65:F3:28:A8:73 (Hewlett Packard)
+Device type: general purpose
+Running: Linux 3.X|4.X
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4
+OS details: Linux 3.2 - 4.0
+Network Distance: 1 hop
+
+Nmap scan report for 192.168.0.113
+Host is up (0.00060s latency).
+Not shown: 996 closed ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+139/tcp open  netbios-ssn
+445/tcp open  microsoft-ds
+902/tcp open  iss-realsecure
+MAC Address: 50:65:F3:2D:83:D3 (Hewlett Packard)
+Device type: general purpose
+Running: Linux 3.X|4.X
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4
+OS details: Linux 3.2 - 4.0
+Network Distance: 1 hop
+
+Nmap scan report for 192.168.0.115
+Host is up (0.00056s latency).
+Not shown: 996 closed ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+139/tcp open  netbios-ssn
+445/tcp open  microsoft-ds
+902/tcp open  iss-realsecure
+MAC Address: 50:65:F3:2E:00:8D (Hewlett Packard)
+Device type: general purpose
+Running: Linux 3.X|4.X
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4
+OS details: Linux 3.2 - 4.0
+Network Distance: 1 hop
+
+Nmap scan report for 192.168.0.116
+Host is up (0.00060s latency).
+Not shown: 996 closed ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+139/tcp open  netbios-ssn
+445/tcp open  microsoft-ds
+902/tcp open  iss-realsecure
+MAC Address: 50:65:F3:27:A7:60 (Hewlett Packard)
+Device type: general purpose
+Running: Linux 3.X|4.X
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4
+OS details: Linux 3.2 - 4.0
+Network Distance: 1 hop
+
+Nmap scan report for 192.168.0.118
+Host is up (0.00052s latency).
+Not shown: 996 closed ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+139/tcp open  netbios-ssn
+445/tcp open  microsoft-ds
+902/tcp open  iss-realsecure
+MAC Address: 50:65:F3:2D:80:AA (Hewlett Packard)
+Device type: general purpose
+Running: Linux 3.X|4.X
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4
+OS details: Linux 3.2 - 4.0
+Network Distance: 1 hop
+
+Nmap scan report for 192.168.0.121
+Host is up (0.0010s latency).
+All 1000 scanned ports on 192.168.0.121 are closed
+MAC Address: 08:00:27:83:0D:E3 (Oracle VirtualBox virtual NIC)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 1 hop
+
+Nmap scan report for 192.168.0.122
+Host is up (0.00061s latency).
+All 1000 scanned ports on 192.168.0.122 are closed
+MAC Address: 08:00:27:03:38:ED (Oracle VirtualBox virtual NIC)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 1 hop
+
+Nmap scan report for 192.168.0.124
+Host is up (0.00036s latency).
+Not shown: 996 closed ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+139/tcp open  netbios-ssn
+445/tcp open  microsoft-ds
+902/tcp open  iss-realsecure
+MAC Address: 50:65:F3:27:AA:0A (Hewlett Packard)
+Device type: general purpose
+Running: Linux 3.X|4.X
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4
+OS details: Linux 3.2 - 4.0
+Network Distance: 1 hop
+
+Nmap scan report for 192.168.0.127
+Host is up (0.00072s latency).
+All 1000 scanned ports on 192.168.0.127 are closed
+MAC Address: 08:00:27:78:51:65 (Oracle VirtualBox virtual NIC)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 1 hop
+
+Nmap scan report for 192.168.0.129
+Host is up (0.00056s latency).
+All 1000 scanned ports on 192.168.0.129 are closed
+MAC Address: 08:00:27:7B:69:8F (Oracle VirtualBox virtual NIC)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 1 hop
+
+Nmap scan report for 192.168.0.130
+Host is up (0.00099s latency).
+All 1000 scanned ports on 192.168.0.130 are closed
+MAC Address: 08:00:27:CF:DE:89 (Oracle VirtualBox virtual NIC)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 1 hop
+
+Nmap scan report for 192.168.0.132
+Host is up (0.00064s latency).
+All 1000 scanned ports on 192.168.0.132 are closed
+MAC Address: 08:00:27:1C:F5:5D (Oracle VirtualBox virtual NIC)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 1 hop
+
+Nmap scan report for 192.168.0.134
+Host is up (0.00045s latency).
+Not shown: 996 closed ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+139/tcp open  netbios-ssn
+445/tcp open  microsoft-ds
+902/tcp open  iss-realsecure
+MAC Address: 50:65:F3:24:7D:8C (Hewlett Packard)
+Device type: general purpose
+Running: Linux 3.X|4.X
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4
+OS details: Linux 3.2 - 4.0
+Network Distance: 1 hop
+
+Nmap scan report for 192.168.0.136
+Host is up (0.00038s latency).
+Not shown: 996 closed ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+139/tcp open  netbios-ssn
+445/tcp open  microsoft-ds
+902/tcp open  iss-realsecure
+MAC Address: 50:65:F3:2A:16:5C (Hewlett Packard)
+Device type: general purpose
+Running: Linux 3.X|4.X
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4
+OS details: Linux 3.2 - 4.0
+Network Distance: 1 hop
+
+Nmap scan report for 192.168.0.139
+Host is up (0.00033s latency).
+Not shown: 996 closed ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+139/tcp open  netbios-ssn
+445/tcp open  microsoft-ds
+902/tcp open  iss-realsecure
+MAC Address: 50:65:F3:27:AA:09 (Hewlett Packard)
+Device type: general purpose
+Running: Linux 3.X|4.X
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4
+OS details: Linux 3.2 - 4.0
+Network Distance: 1 hop
+
+Nmap scan report for 192.168.0.140
+Host is up (0.00041s latency).
+Not shown: 996 closed ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+139/tcp open  netbios-ssn
+445/tcp open  microsoft-ds
+902/tcp open  iss-realsecure
+MAC Address: 50:65:F3:2A:19:1C (Hewlett Packard)
+Device type: general purpose
+Running: Linux 3.X|4.X
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4
+OS details: Linux 3.2 - 4.0
+Network Distance: 1 hop
+
+Nmap scan report for 192.168.0.147
+Host is up (0.00068s latency).
+Not shown: 996 closed ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+139/tcp open  netbios-ssn
+445/tcp open  microsoft-ds
+902/tcp open  iss-realsecure
+MAC Address: 50:65:F3:28:DF:7D (Hewlett Packard)
+Device type: general purpose
+Running: Linux 3.X|4.X
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4
+OS details: Linux 3.2 - 4.0
+Network Distance: 1 hop
+
+Nmap scan report for 192.168.0.149
+Host is up (0.00095s latency).
+Not shown: 996 closed ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+139/tcp open  netbios-ssn
+445/tcp open  microsoft-ds
+902/tcp open  iss-realsecure
+MAC Address: 50:65:F3:2D:80:A8 (Hewlett Packard)
+Device type: general purpose
+Running: Linux 3.X|4.X
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4
+OS details: Linux 3.2 - 4.0
+Network Distance: 1 hop
+
+Nmap scan report for 192.168.0.151
+Host is up (0.00052s latency).
+Not shown: 996 closed ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+139/tcp open  netbios-ssn
+445/tcp open  microsoft-ds
+902/tcp open  iss-realsecure
+MAC Address: 50:65:F3:2A:19:6B (Hewlett Packard)
+Device type: general purpose
+Running: Linux 3.X|4.X
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4
+OS details: Linux 3.2 - 4.0
+Network Distance: 1 hop
+
+Nmap scan report for 192.168.0.126
+Host is up (0.000037s latency).
+All 1000 scanned ports on 192.168.0.126 are closed
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: phone|general purpose|webcam|storage-misc
+Running: Google Android 2.X, Linux 2.6.X, AXIS embedded, ZyXEL embedded
+OS CPE: cpe:/o:google:android:2.2 cpe:/o:linux:linux_kernel:2.6 cpe:/o:linux:linux_kernel:2.6.17 cpe:/h:axis:210a_network_camera cpe:/h:axis:211_network_camera cpe:/h:zyxel:nsa-210
+OS details: Android 2.2 (Linux 2.6), Linux 2.6.14 - 2.6.34, Linux 2.6.17, Linux 2.6.17 (Mandriva), Linux 2.6.32, AXIS 210A or 211 Network Camera (Linux 2.6.17), ZyXEL NSA-210 NAS device
+Network Distance: 0 hops
+
+OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 256 IP addresses (29 hosts up) scanned in 440.77 seconds
+</output><host comment=""><status state="up"></status><address addrtype="ipv4" vendor="" addr="192.168.0.1"></address><address addrtype="mac" vendor="" addr="18:D6:C7:90:E5:73"></address><hostnames></hostnames><ports><extraports count="995" state="closed"></extraports><port protocol="tcp" portid="21"><state reason="no-response" state="filtered" reason_ttl="0"></state><service method="table" conf="3" name="ftp"></service></port><port protocol="tcp" portid="22"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="ssh"></service></port><port protocol="tcp" portid="80"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="http"></service></port><port protocol="tcp" portid="1900"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="upnp"></service></port><port protocol="tcp" portid="20005"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="btx"></service></port></ports><os><portused state="open" portid="22" proto="tcp"></portused><portused state="closed" portid="1" proto="tcp"></portused><portused state="closed" portid="40769" proto="udp"></portused><osmatch line="46507" name="Linux 2.6.23 - 2.6.38" accuracy="100"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="2.6.X" accuracy="100"></osclass></osmatch></os><uptime lastboot="Thu Sep  5 13:59:20 2019" seconds="1629433"></uptime><tcpsequence index="204" values="D8D035AE,D98A0617,D97DC4AA,DA11A63D,DA0DD2D5,DA4972B5" difficulty="Good luck!"></tcpsequence><ipidsequence values="0,0,0,0,0,0" class="All zeros"></ipidsequence><tcptssequence values="182EDD3E,182EDD57,182EDD8E,182EDDC2,182EDDDC,182EDE10" class="other"></tcptssequence></host><host comment=""><status state="up"></status><address addrtype="ipv4" vendor="" addr="192.168.0.2"></address><address addrtype="mac" vendor="" addr="AC:84:C6:AC:30:59"></address><hostnames></hostnames><ports><extraports count="996" state="closed"></extraports><port protocol="tcp" portid="22"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="ssh"></service></port><port protocol="tcp" portid="23"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="telnet"></service></port><port protocol="tcp" portid="80"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="http"></service></port><port protocol="tcp" portid="443"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="https"></service></port></ports><os><portused state="open" portid="22" proto="tcp"></portused><portused state="closed" portid="1" proto="tcp"></portused><portused state="closed" portid="35242" proto="udp"></portused><osmatch line="50494" name="Linux 2.6.32 - 2.6.35" accuracy="100"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="2.6.X" accuracy="100"></osclass></osmatch></os><uptime lastboot="Thu Sep  5 15:48:01 2019" seconds="1622912"></uptime><tcpsequence index="258" values="660B6132,BD5E8012,345FD407,C45BC530,C505D9BC,AD7A343" difficulty="Good luck!"></tcpsequence><ipidsequence values="0,0,0,0,0,0" class="All zeros"></ipidsequence><tcptssequence values="9AC56FB,9AC5705,9AC571B,9AC5731,9AC5742,9AC574F" class="100HZ"></tcptssequence></host><host comment=""><status state="up"></status><address addrtype="ipv4" vendor="" addr="192.168.0.102"></address><address addrtype="mac" vendor="Hewlett Packard" addr="50:65:F3:25:2A:31"></address><hostnames></hostnames><ports><extraports count="996" state="closed"></extraports><port protocol="tcp" portid="22"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="ssh"></service></port><port protocol="tcp" portid="139"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="netbios-ssn"></service></port><port protocol="tcp" portid="445"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="microsoft-ds"></service></port><port protocol="tcp" portid="902"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="iss-realsecure"></service></port></ports><os><portused state="open" portid="22" proto="tcp"></portused><portused state="closed" portid="1" proto="tcp"></portused><portused state="closed" portid="31413" proto="udp"></portused><osmatch line="58530" name="Linux 3.2 - 4.0" accuracy="100"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="4.X" accuracy="100"></osclass></osmatch></os><uptime lastboot="Tue Sep 24 08:09:03 2019" seconds="8850"></uptime><tcpsequence index="262" values="5E52B096,72706F23,F0D6917A,64536F87,29E70FD7,15002B34" difficulty="Good luck!"></tcpsequence><ipidsequence values="0,0,0,0,0,0" class="All zeros"></ipidsequence><tcptssequence values="218F6B,218FA0,218FBB,218FF0,219022,21903D" class="other"></tcptssequence></host><host comment=""><status state="up"></status><address addrtype="ipv4" vendor="" addr="192.168.0.103"></address><address addrtype="mac" vendor="" addr="80:2B:F9:19:6D:6F"></address><hostnames></hostnames><ports><extraports count="1000" state="filtered"></extraports></ports><os></os><uptime lastboot="" seconds=""></uptime><tcpsequence index="" values="" difficulty=""></tcpsequence><ipidsequence values="" class=""></ipidsequence><tcptssequence values="" class=""></tcptssequence></host><host comment=""><status state="up"></status><address addrtype="ipv4" vendor="" addr="192.168.0.104"></address><address addrtype="mac" vendor="Oracle VirtualBox virtual NIC" addr="08:00:27:09:67:8D"></address><hostnames></hostnames><ports><extraports count="999" state="filtered"></extraports><port protocol="tcp" portid="5357"><state reason="syn-ack" state="open" reason_ttl="128"></state><service method="table" conf="3" name="wsdapi"></service></port></ports><os><portused state="open" portid="5357" proto="tcp"></portused><osmatch line="8095" name="AVtech Room Alert 26W environmental monitor" accuracy="87"><osclass type="specialized" osfamily="embedded" vendor="AVtech" osgen="" accuracy="87"></osclass></osmatch><osmatch line="24341" name="FreeBSD 6.3-RELEASE" accuracy="86"><osclass type="general purpose" osfamily="FreeBSD" vendor="FreeBSD" osgen="6.X" accuracy="86"></osclass></osmatch><osmatch line="71509" name="Microsoft Windows XP SP2" accuracy="85"><osclass type="general purpose" osfamily="Windows" vendor="Microsoft" osgen="XP" accuracy="85"></osclass></osmatch></os><uptime lastboot="" seconds=""></uptime><tcpsequence index="257" values="4518A705,EAC6DEBB,96FA2F4F,814AB69A,3EBCCCB3,5BF3E6C6" difficulty="Good luck!"></tcpsequence><ipidsequence values="68E9,68EA,68EB,68EC,68ED,68EE" class="Incremental"></ipidsequence><tcptssequence values="" class="none returned (unsupported)"></tcptssequence></host><host comment=""><status state="up"></status><address addrtype="ipv4" vendor="" addr="192.168.0.105"></address><address addrtype="mac" vendor="Hewlett Packard" addr="50:65:F3:27:AA:33"></address><hostnames></hostnames><ports><extraports count="996" state="closed"></extraports><port protocol="tcp" portid="22"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="ssh"></service></port><port protocol="tcp" portid="139"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="netbios-ssn"></service></port><port protocol="tcp" portid="445"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="microsoft-ds"></service></port><port protocol="tcp" portid="902"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="iss-realsecure"></service></port></ports><os><portused state="open" portid="22" proto="tcp"></portused><portused state="closed" portid="1" proto="tcp"></portused><portused state="closed" portid="35343" proto="udp"></portused><osmatch line="58530" name="Linux 3.2 - 4.0" accuracy="100"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="4.X" accuracy="100"></osclass></osmatch></os><uptime lastboot="Tue Sep 24 08:08:55 2019" seconds="8858"></uptime><tcpsequence index="254" values="42C77571,8B0AAE41,EC4694ED,33ACF66E,C904BF42,5B03790" difficulty="Good luck!"></tcpsequence><ipidsequence values="0,0,0,0,0,0" class="All zeros"></ipidsequence><tcptssequence values="2196F2,219727,219742,219777,2197A9,2197C4" class="other"></tcptssequence></host><host comment=""><status state="up"></status><address addrtype="ipv4" vendor="" addr="192.168.0.108"></address><address addrtype="mac" vendor="Oracle VirtualBox virtual NIC" addr="08:00:27:67:94:CD"></address><hostnames></hostnames><ports><extraports count="1000" state="closed"></extraports></ports><os><portused state="closed" portid="1" proto="tcp"></portused><portused state="closed" portid="42014" proto="udp"></portused></os><uptime lastboot="" seconds=""></uptime><tcpsequence index="" values="" difficulty=""></tcpsequence><ipidsequence values="" class=""></ipidsequence><tcptssequence values="" class=""></tcptssequence></host><host comment=""><status state="up"></status><address addrtype="ipv4" vendor="" addr="192.168.0.109"></address><address addrtype="mac" vendor="Hewlett Packard" addr="50:65:F3:27:A7:86"></address><hostnames></hostnames><ports><extraports count="996" state="closed"></extraports><port protocol="tcp" portid="22"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="ssh"></service></port><port protocol="tcp" portid="139"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="netbios-ssn"></service></port><port protocol="tcp" portid="445"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="microsoft-ds"></service></port><port protocol="tcp" portid="902"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="iss-realsecure"></service></port></ports><os><portused state="open" portid="22" proto="tcp"></portused><portused state="closed" portid="1" proto="tcp"></portused><portused state="closed" portid="35963" proto="udp"></portused><osmatch line="58530" name="Linux 3.2 - 4.0" accuracy="100"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="4.X" accuracy="100"></osclass></osmatch></os><uptime lastboot="Tue Sep 24 08:09:30 2019" seconds="8823"></uptime><tcpsequence index="251" values="A48691D0,610926C8,393C2426,FA066EB1,4300164D,F75B2439" difficulty="Good luck!"></tcpsequence><ipidsequence values="0,0,0,0,0,0" class="All zeros"></ipidsequence><tcptssequence values="21973D,219771,21978D,2197C1,2197F4,21980F" class="other"></tcptssequence></host><host comment=""><status state="up"></status><address addrtype="ipv4" vendor="" addr="192.168.0.111"></address><address addrtype="mac" vendor="Hewlett Packard" addr="50:65:F3:2E:00:69"></address><hostnames></hostnames><ports><extraports count="996" state="closed"></extraports><port protocol="tcp" portid="22"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="ssh"></service></port><port protocol="tcp" portid="139"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="netbios-ssn"></service></port><port protocol="tcp" portid="445"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="microsoft-ds"></service></port><port protocol="tcp" portid="902"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="iss-realsecure"></service></port></ports><os><portused state="open" portid="22" proto="tcp"></portused><portused state="closed" portid="1" proto="tcp"></portused><portused state="closed" portid="42655" proto="udp"></portused><osmatch line="58530" name="Linux 3.2 - 4.0" accuracy="100"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="4.X" accuracy="100"></osclass></osmatch></os><uptime lastboot="Tue Sep 24 08:12:27 2019" seconds="8646"></uptime><tcpsequence index="263" values="6B5FE472,CC840341,C7EF5D80,419E7695,4B443066,B898447B" difficulty="Good luck!"></tcpsequence><ipidsequence values="0,0,0,0,0,0" class="All zeros"></ipidsequence><tcptssequence values="20C83A,20C86E,20C8A5,20C8BE,20C8F1,20C925" class="other"></tcptssequence></host><host comment=""><status state="up"></status><address addrtype="ipv4" vendor="" addr="192.168.0.112"></address><address addrtype="mac" vendor="Hewlett Packard" addr="50:65:F3:28:A8:73"></address><hostnames></hostnames><ports><extraports count="996" state="closed"></extraports><port protocol="tcp" portid="22"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="ssh"></service></port><port protocol="tcp" portid="139"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="netbios-ssn"></service></port><port protocol="tcp" portid="445"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="microsoft-ds"></service></port><port protocol="tcp" portid="902"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="iss-realsecure"></service></port></ports><os><portused state="open" portid="22" proto="tcp"></portused><portused state="closed" portid="1" proto="tcp"></portused><portused state="closed" portid="31787" proto="udp"></portused><osmatch line="58530" name="Linux 3.2 - 4.0" accuracy="100"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="4.X" accuracy="100"></osclass></osmatch></os><uptime lastboot="Tue Sep 24 08:09:45 2019" seconds="8808"></uptime><tcpsequence index="248" values="4DBF76E9,AFF7C8B0,E259FAB9,D5288AA0,F9BEEBE3,D184E81B" difficulty="Good luck!"></tcpsequence><ipidsequence values="0,0,0,0,0,0" class="All zeros"></ipidsequence><tcptssequence values="218895,2188CA,218901,21891A,21894C,218981" class="other"></tcptssequence></host><host comment=""><status state="up"></status><address addrtype="ipv4" vendor="" addr="192.168.0.113"></address><address addrtype="mac" vendor="Hewlett Packard" addr="50:65:F3:2D:83:D3"></address><hostnames></hostnames><ports><extraports count="996" state="closed"></extraports><port protocol="tcp" portid="22"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="ssh"></service></port><port protocol="tcp" portid="139"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="netbios-ssn"></service></port><port protocol="tcp" portid="445"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="microsoft-ds"></service></port><port protocol="tcp" portid="902"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="iss-realsecure"></service></port></ports><os><portused state="open" portid="22" proto="tcp"></portused><portused state="closed" portid="1" proto="tcp"></portused><portused state="closed" portid="43411" proto="udp"></portused><osmatch line="58530" name="Linux 3.2 - 4.0" accuracy="100"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="4.X" accuracy="100"></osclass></osmatch></os><uptime lastboot="Tue Sep 24 08:10:46 2019" seconds="8747"></uptime><tcpsequence index="252" values="69F09C95,50BD600C,BE08F1FE,91681EF7,DE7CEA1,AAC5ACE1" difficulty="Good luck!"></tcpsequence><ipidsequence values="0,0,0,0,0,0" class="All zeros"></ipidsequence><tcptssequence values="212AE9,212B1D,212B54,212B6D,212BA0,212BD4" class="other"></tcptssequence></host><host comment=""><status state="up"></status><address addrtype="ipv4" vendor="" addr="192.168.0.115"></address><address addrtype="mac" vendor="Hewlett Packard" addr="50:65:F3:2E:00:8D"></address><hostnames></hostnames><ports><extraports count="996" state="closed"></extraports><port protocol="tcp" portid="22"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="ssh"></service></port><port protocol="tcp" portid="139"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="netbios-ssn"></service></port><port protocol="tcp" portid="445"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="microsoft-ds"></service></port><port protocol="tcp" portid="902"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="iss-realsecure"></service></port></ports><os><portused state="open" portid="22" proto="tcp"></portused><portused state="closed" portid="1" proto="tcp"></portused><portused state="closed" portid="30618" proto="udp"></portused><osmatch line="58530" name="Linux 3.2 - 4.0" accuracy="100"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="4.X" accuracy="100"></osclass></osmatch></os><uptime lastboot="Tue Sep 24 08:09:35 2019" seconds="8818"></uptime><tcpsequence index="261" values="93A906E1,3B3BDB39,1E69E057,914218C6,315A3BE0,66F05226" difficulty="Good luck!"></tcpsequence><ipidsequence values="0,0,0,0,0,0" class="All zeros"></ipidsequence><tcptssequence values="219266,21929B,2192D1,2192EB,21931D,219351" class="other"></tcptssequence></host><host comment=""><status state="up"></status><address addrtype="ipv4" vendor="" addr="192.168.0.116"></address><address addrtype="mac" vendor="Hewlett Packard" addr="50:65:F3:27:A7:60"></address><hostnames></hostnames><ports><extraports count="996" state="closed"></extraports><port protocol="tcp" portid="22"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="ssh"></service></port><port protocol="tcp" portid="139"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="netbios-ssn"></service></port><port protocol="tcp" portid="445"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="microsoft-ds"></service></port><port protocol="tcp" portid="902"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="iss-realsecure"></service></port></ports><os><portused state="open" portid="22" proto="tcp"></portused><portused state="closed" portid="1" proto="tcp"></portused><portused state="closed" portid="34493" proto="udp"></portused><osmatch line="58530" name="Linux 3.2 - 4.0" accuracy="100"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="4.X" accuracy="100"></osclass></osmatch></os><uptime lastboot="Tue Sep 24 09:35:39 2019" seconds="3654"></uptime><tcpsequence index="258" values="8068F108,C15BFBBD,A310EA13,8F9AC286,E498B491,22EFDAB7" difficulty="Good luck!"></tcpsequence><ipidsequence values="0,0,0,0,0,0" class="All zeros"></ipidsequence><tcptssequence values="DDF84,DDFA0,DDFD6,DE009,DE022,DE056" class="other"></tcptssequence></host><host comment=""><status state="up"></status><address addrtype="ipv4" vendor="" addr="192.168.0.118"></address><address addrtype="mac" vendor="Hewlett Packard" addr="50:65:F3:2D:80:AA"></address><hostnames></hostnames><ports><extraports count="996" state="closed"></extraports><port protocol="tcp" portid="22"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="ssh"></service></port><port protocol="tcp" portid="139"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="netbios-ssn"></service></port><port protocol="tcp" portid="445"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="microsoft-ds"></service></port><port protocol="tcp" portid="902"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="iss-realsecure"></service></port></ports><os><portused state="open" portid="22" proto="tcp"></portused><portused state="closed" portid="1" proto="tcp"></portused><portused state="closed" portid="35384" proto="udp"></portused><osmatch line="58530" name="Linux 3.2 - 4.0" accuracy="100"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="4.X" accuracy="100"></osclass></osmatch></os><uptime lastboot="Tue Sep 24 08:10:17 2019" seconds="8776"></uptime><tcpsequence index="258" values="D54AA3B8,E89D3CA,64F150D5,D71E1B7F,3A044A3D,54ED345C" difficulty="Good luck!"></tcpsequence><ipidsequence values="0,0,0,0,0,0" class="All zeros"></ipidsequence><tcptssequence values="21474E,214769,2147A0,2147D3,2147EC,214820" class="other"></tcptssequence></host><host comment=""><status state="up"></status><address addrtype="ipv4" vendor="" addr="192.168.0.121"></address><address addrtype="mac" vendor="Oracle VirtualBox virtual NIC" addr="08:00:27:83:0D:E3"></address><hostnames></hostnames><ports><extraports count="1000" state="closed"></extraports></ports><os><portused state="closed" portid="1" proto="tcp"></portused><portused state="closed" portid="37559" proto="udp"></portused></os><uptime lastboot="" seconds=""></uptime><tcpsequence index="" values="" difficulty=""></tcpsequence><ipidsequence values="" class=""></ipidsequence><tcptssequence values="" class=""></tcptssequence></host><host comment=""><status state="up"></status><address addrtype="ipv4" vendor="" addr="192.168.0.122"></address><address addrtype="mac" vendor="Oracle VirtualBox virtual NIC" addr="08:00:27:03:38:ED"></address><hostnames></hostnames><ports><extraports count="1000" state="closed"></extraports></ports><os><portused state="closed" portid="1" proto="tcp"></portused><portused state="closed" portid="39770" proto="udp"></portused></os><uptime lastboot="" seconds=""></uptime><tcpsequence index="" values="" difficulty=""></tcpsequence><ipidsequence values="" class=""></ipidsequence><tcptssequence values="" class=""></tcptssequence></host><host comment=""><status state="up"></status><address addrtype="ipv4" vendor="" addr="192.168.0.124"></address><address addrtype="mac" vendor="Hewlett Packard" addr="50:65:F3:27:AA:0A"></address><hostnames></hostnames><ports><extraports count="996" state="closed"></extraports><port protocol="tcp" portid="22"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="ssh"></service></port><port protocol="tcp" portid="139"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="netbios-ssn"></service></port><port protocol="tcp" portid="445"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="microsoft-ds"></service></port><port protocol="tcp" portid="902"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="iss-realsecure"></service></port></ports><os><portused state="open" portid="22" proto="tcp"></portused><portused state="closed" portid="1" proto="tcp"></portused><portused state="closed" portid="39994" proto="udp"></portused><osmatch line="58530" name="Linux 3.2 - 4.0" accuracy="100"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="4.X" accuracy="100"></osclass></osmatch></os><uptime lastboot="Tue Sep 24 08:09:21 2019" seconds="8832"></uptime><tcpsequence index="255" values="7CD9962A,742145E2,5F41A598,15F62405,D41A3301,2C73BA4E" difficulty="Good luck!"></tcpsequence><ipidsequence values="0,0,0,0,0,0" class="All zeros"></ipidsequence><tcptssequence values="217D08,217D23,217D5A,217D8D,217DA6,217DDA" class="other"></tcptssequence></host><host comment=""><status state="up"></status><address addrtype="ipv4" vendor="" addr="192.168.0.127"></address><address addrtype="mac" vendor="Oracle VirtualBox virtual NIC" addr="08:00:27:78:51:65"></address><hostnames></hostnames><ports><extraports count="1000" state="closed"></extraports></ports><os><portused state="closed" portid="1" proto="tcp"></portused><portused state="closed" portid="44524" proto="udp"></portused></os><uptime lastboot="" seconds=""></uptime><tcpsequence index="" values="" difficulty=""></tcpsequence><ipidsequence values="" class=""></ipidsequence><tcptssequence values="" class=""></tcptssequence></host><host comment=""><status state="up"></status><address addrtype="ipv4" vendor="" addr="192.168.0.129"></address><address addrtype="mac" vendor="Oracle VirtualBox virtual NIC" addr="08:00:27:7B:69:8F"></address><hostnames></hostnames><ports><extraports count="1000" state="closed"></extraports></ports><os><portused state="closed" portid="1" proto="tcp"></portused><portused state="closed" portid="44629" proto="udp"></portused></os><uptime lastboot="" seconds=""></uptime><tcpsequence index="" values="" difficulty=""></tcpsequence><ipidsequence values="" class=""></ipidsequence><tcptssequence values="" class=""></tcptssequence></host><host comment=""><status state="up"></status><address addrtype="ipv4" vendor="" addr="192.168.0.130"></address><address addrtype="mac" vendor="Oracle VirtualBox virtual NIC" addr="08:00:27:CF:DE:89"></address><hostnames></hostnames><ports><extraports count="1000" state="closed"></extraports></ports><os><portused state="closed" portid="1" proto="tcp"></portused><portused state="closed" portid="41946" proto="udp"></portused></os><uptime lastboot="" seconds=""></uptime><tcpsequence index="" values="" difficulty=""></tcpsequence><ipidsequence values="" class=""></ipidsequence><tcptssequence values="" class=""></tcptssequence></host><host comment=""><status state="up"></status><address addrtype="ipv4" vendor="" addr="192.168.0.132"></address><address addrtype="mac" vendor="Oracle VirtualBox virtual NIC" addr="08:00:27:1C:F5:5D"></address><hostnames></hostnames><ports><extraports count="1000" state="closed"></extraports></ports><os><portused state="closed" portid="1" proto="tcp"></portused><portused state="closed" portid="30703" proto="udp"></portused></os><uptime lastboot="" seconds=""></uptime><tcpsequence index="" values="" difficulty=""></tcpsequence><ipidsequence values="" class=""></ipidsequence><tcptssequence values="" class=""></tcptssequence></host><host comment=""><status state="up"></status><address addrtype="ipv4" vendor="" addr="192.168.0.134"></address><address addrtype="mac" vendor="Hewlett Packard" addr="50:65:F3:24:7D:8C"></address><hostnames></hostnames><ports><extraports count="996" state="closed"></extraports><port protocol="tcp" portid="22"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="ssh"></service></port><port protocol="tcp" portid="139"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="netbios-ssn"></service></port><port protocol="tcp" portid="445"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="microsoft-ds"></service></port><port protocol="tcp" portid="902"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="iss-realsecure"></service></port></ports><os><portused state="open" portid="22" proto="tcp"></portused><portused state="closed" portid="1" proto="tcp"></portused><portused state="closed" portid="40824" proto="udp"></portused><osmatch line="58530" name="Linux 3.2 - 4.0" accuracy="100"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="4.X" accuracy="100"></osclass></osmatch></os><uptime lastboot="Tue Sep 24 08:10:11 2019" seconds="8782"></uptime><tcpsequence index="256" values="11EE0067,C9CE2C25,A660EC9D,904B3B77,4F354692,E8D8E36A" difficulty="Good luck!"></tcpsequence><ipidsequence values="0,0,0,0,0,0" class="All zeros"></ipidsequence><tcptssequence values="21917A,219196,2191CC,2191FF,219218,21924D" class="other"></tcptssequence></host><host comment=""><status state="up"></status><address addrtype="ipv4" vendor="" addr="192.168.0.136"></address><address addrtype="mac" vendor="Hewlett Packard" addr="50:65:F3:2A:16:5C"></address><hostnames></hostnames><ports><extraports count="996" state="closed"></extraports><port protocol="tcp" portid="22"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="ssh"></service></port><port protocol="tcp" portid="139"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="netbios-ssn"></service></port><port protocol="tcp" portid="445"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="microsoft-ds"></service></port><port protocol="tcp" portid="902"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="iss-realsecure"></service></port></ports><os><portused state="open" portid="22" proto="tcp"></portused><portused state="closed" portid="1" proto="tcp"></portused><portused state="closed" portid="37054" proto="udp"></portused><osmatch line="58530" name="Linux 3.2 - 4.0" accuracy="100"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="4.X" accuracy="100"></osclass></osmatch></os><uptime lastboot="Tue Sep 24 08:09:38 2019" seconds="8815"></uptime><tcpsequence index="265" values="73FB7644,82227F53,93750C4,659091D3,78CDB1F5,F54BCA39" difficulty="Good luck!"></tcpsequence><ipidsequence values="0,0,0,0,0,0" class="All zeros"></ipidsequence><tcptssequence values="216CDB,216D12,216D2D,216D60,216D94,216DAD" class="other"></tcptssequence></host><host comment=""><status state="up"></status><address addrtype="ipv4" vendor="" addr="192.168.0.139"></address><address addrtype="mac" vendor="Hewlett Packard" addr="50:65:F3:27:AA:09"></address><hostnames></hostnames><ports><extraports count="996" state="closed"></extraports><port protocol="tcp" portid="22"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="ssh"></service></port><port protocol="tcp" portid="139"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="netbios-ssn"></service></port><port protocol="tcp" portid="445"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="microsoft-ds"></service></port><port protocol="tcp" portid="902"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="iss-realsecure"></service></port></ports><os><portused state="open" portid="22" proto="tcp"></portused><portused state="closed" portid="1" proto="tcp"></portused><portused state="closed" portid="32123" proto="udp"></portused><osmatch line="58530" name="Linux 3.2 - 4.0" accuracy="100"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="4.X" accuracy="100"></osclass></osmatch></os><uptime lastboot="Tue Sep 24 08:09:16 2019" seconds="8837"></uptime><tcpsequence index="261" values="48065B8C,D311409E,AEAC407A,6F5430A0,91C7FBFB,18D6D392" difficulty="Good luck!"></tcpsequence><ipidsequence values="0,0,0,0,0,0" class="All zeros"></ipidsequence><tcptssequence values="2181E1,218218,218233,218266,21829A,2182B3" class="other"></tcptssequence></host><host comment=""><status state="up"></status><address addrtype="ipv4" vendor="" addr="192.168.0.140"></address><address addrtype="mac" vendor="Hewlett Packard" addr="50:65:F3:2A:19:1C"></address><hostnames></hostnames><ports><extraports count="996" state="closed"></extraports><port protocol="tcp" portid="22"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="ssh"></service></port><port protocol="tcp" portid="139"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="netbios-ssn"></service></port><port protocol="tcp" portid="445"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="microsoft-ds"></service></port><port protocol="tcp" portid="902"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="iss-realsecure"></service></port></ports><os><portused state="open" portid="22" proto="tcp"></portused><portused state="closed" portid="1" proto="tcp"></portused><portused state="closed" portid="42771" proto="udp"></portused><osmatch line="58530" name="Linux 3.2 - 4.0" accuracy="100"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="4.X" accuracy="100"></osclass></osmatch></os><uptime lastboot="Tue Sep 24 08:09:38 2019" seconds="8815"></uptime><tcpsequence index="260" values="78BEC81F,EE965A83,A5C82165,DD073F2A,972CD076,1AEE7F67" difficulty="Good luck!"></tcpsequence><ipidsequence values="0,0,0,0,0,0" class="All zeros"></ipidsequence><tcptssequence values="218F8F,218FC5,218FE0,219013,219047,219061" class="other"></tcptssequence></host><host comment=""><status state="up"></status><address addrtype="ipv4" vendor="" addr="192.168.0.147"></address><address addrtype="mac" vendor="Hewlett Packard" addr="50:65:F3:28:DF:7D"></address><hostnames></hostnames><ports><extraports count="996" state="closed"></extraports><port protocol="tcp" portid="22"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="ssh"></service></port><port protocol="tcp" portid="139"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="netbios-ssn"></service></port><port protocol="tcp" portid="445"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="microsoft-ds"></service></port><port protocol="tcp" portid="902"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="iss-realsecure"></service></port></ports><os><portused state="open" portid="22" proto="tcp"></portused><portused state="closed" portid="1" proto="tcp"></portused><portused state="closed" portid="31753" proto="udp"></portused><osmatch line="58530" name="Linux 3.2 - 4.0" accuracy="100"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="4.X" accuracy="100"></osclass></osmatch></os><uptime lastboot="Tue Sep 24 08:10:11 2019" seconds="8782"></uptime><tcpsequence index="246" values="888DD3D0,29E2969,2D3F26B3,93453D66,49BCE3D5,2B29AE1E" difficulty="Good luck!"></tcpsequence><ipidsequence values="0,0,0,0,0,0" class="All zeros"></ipidsequence><tcptssequence values="219182,2191B9,2191D4,219207,21923B,219255" class="other"></tcptssequence></host><host comment=""><status state="up"></status><address addrtype="ipv4" vendor="" addr="192.168.0.149"></address><address addrtype="mac" vendor="Hewlett Packard" addr="50:65:F3:2D:80:A8"></address><hostnames></hostnames><ports><extraports count="996" state="closed"></extraports><port protocol="tcp" portid="22"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="ssh"></service></port><port protocol="tcp" portid="139"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="netbios-ssn"></service></port><port protocol="tcp" portid="445"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="microsoft-ds"></service></port><port protocol="tcp" portid="902"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="iss-realsecure"></service></port></ports><os><portused state="open" portid="22" proto="tcp"></portused><portused state="closed" portid="1" proto="tcp"></portused><portused state="closed" portid="42971" proto="udp"></portused><osmatch line="58530" name="Linux 3.2 - 4.0" accuracy="100"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="4.X" accuracy="100"></osclass></osmatch></os><uptime lastboot="Tue Sep 24 08:09:35 2019" seconds="8818"></uptime><tcpsequence index="259" values="97566261,A1D447B6,1338B51,A79B5507,FCD5EF31,16A97DD4" difficulty="Good luck!"></tcpsequence><ipidsequence values="0,0,0,0,0,0" class="All zeros"></ipidsequence><tcptssequence values="21927B,2192B1,2192E6,2192FF,219334,219366" class="other"></tcptssequence></host><host comment=""><status state="up"></status><address addrtype="ipv4" vendor="" addr="192.168.0.151"></address><address addrtype="mac" vendor="Hewlett Packard" addr="50:65:F3:2A:19:6B"></address><hostnames></hostnames><ports><extraports count="996" state="closed"></extraports><port protocol="tcp" portid="22"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="ssh"></service></port><port protocol="tcp" portid="139"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="netbios-ssn"></service></port><port protocol="tcp" portid="445"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="microsoft-ds"></service></port><port protocol="tcp" portid="902"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="iss-realsecure"></service></port></ports><os><portused state="open" portid="22" proto="tcp"></portused><portused state="closed" portid="1" proto="tcp"></portused><portused state="closed" portid="42963" proto="udp"></portused><osmatch line="58530" name="Linux 3.2 - 4.0" accuracy="100"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="4.X" accuracy="100"></osclass></osmatch></os><uptime lastboot="Tue Sep 24 08:09:36 2019" seconds="8817"></uptime><tcpsequence index="253" values="C4F6D70B,6B57F637,C8ADE94A,EFDDF8F7,AF7BA40C,F607815C" difficulty="Good luck!"></tcpsequence><ipidsequence values="0,0,0,0,0,0" class="All zeros"></ipidsequence><tcptssequence values="219F97,219FB2,219FCE,219FE9,21A005,21A01E" class="other"></tcptssequence></host><host comment=""><status state="up"></status><address addrtype="ipv4" vendor="" addr="192.168.0.126"></address><hostnames></hostnames><ports><extraports count="1000" state="closed"></extraports></ports><os><portused state="closed" portid="1" proto="tcp"></portused><portused state="closed" portid="36794" proto="udp"></portused><osmatch line="26819" name="Android 2.2 (Linux 2.6)" accuracy="100"><osclass type="phone" osfamily="Linux" vendor="Linux" osgen="2.6.X" accuracy="100"></osclass></osmatch><osmatch line="42517" name="Linux 2.6.14 - 2.6.34" accuracy="100"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="2.6.X" accuracy="100"></osclass></osmatch><osmatch line="43043" name="Linux 2.6.17" accuracy="100"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="2.6.X" accuracy="100"></osclass></osmatch><osmatch line="43079" name="Linux 2.6.17 (Mandriva)" accuracy="100"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="2.6.X" accuracy="100"></osclass></osmatch><osmatch line="50395" name="Linux 2.6.32" accuracy="100"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="2.6.X" accuracy="100"></osclass></osmatch><osmatch line="55785" name="AXIS 210A or 211 Network Camera (Linux 2.6.17)" accuracy="100"><osclass type="webcam" osfamily="embedded" vendor="AXIS" osgen="" accuracy="100"></osclass></osmatch><osmatch line="94435" name="ZyXEL NSA-210 NAS device" accuracy="100"><osclass type="storage-misc" osfamily="embedded" vendor="ZyXEL" osgen="" accuracy="100"></osclass></osmatch></os><uptime lastboot="" seconds=""></uptime><tcpsequence index="" values="" difficulty=""></tcpsequence><ipidsequence values="" class=""></ipidsequence><tcptssequence values="" class=""></tcptssequence></host><runstats><finished timestr="Tue Sep 24 10:36:37 2019" time="1569314197"></finished><hosts down="227" total="256" up="29"></hosts></runstats></nmaprun>

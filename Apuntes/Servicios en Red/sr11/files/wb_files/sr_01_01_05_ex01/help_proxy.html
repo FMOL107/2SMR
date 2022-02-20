@@ -1,0 +1,43 @@
+<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #408080; font-style: italic">######################</span>
+<span style="color: #408080; font-style: italic"># Interfaces de red  #</span>
+<span style="color: #408080; font-style: italic">######################</span>
+
+<span style="color: #408080; font-style: italic">#EDIT /etc/network/interfaces (configurar los parámetros estáticos de la interfaz eth0: IP 192.168.5.240/24, gateway 192.168.5.1, servidores de nombres 192.168.5.1 y 8.8.8.8)</span>
+auto eth0
+iface eth0 inet static
+    address 192.168.5.240
+    netmask 255.255.255.0
+    gateway 192.168.5.1
+    dns-nameservers 192.168.5.1 8.8.8.8
+
+<span style="color: #408080; font-style: italic">#Deshabilitar y habilitar la interfaz de red eth0, configurando los parámetros establecidos en /etc/network/interfaces</span>
+ifdown eth0
+ifup eth0
+
+<span style="color: #408080; font-style: italic">##################</span>
+<span style="color: #408080; font-style: italic"># Servicio proxy #</span>
+<span style="color: #408080; font-style: italic">##################</span>
+
+<span style="color: #408080; font-style: italic">#Instalar Squid</span>
+apt-get install squid
+
+<span style="color: #408080; font-style: italic">#Archivo de log por defecto de Squid</span>
+cat /var/log/squid
+
+<span style="color: #408080; font-style: italic">#EDIT /etc/squid/squid.conf (habilitar las peticiones procedentes de 192.168.0.0/16 en Squid)</span>
+acl localnet src 192.168.0.0/16
+http_access allow localnet
+
+<span style="color: #408080; font-style: italic">#############</span>
+<span style="color: #408080; font-style: italic"># Navegador #</span>
+<span style="color: #408080; font-style: italic">#############</span>
+
+<span style="color: #408080; font-style: italic">#Descargar la página predeterminada del servidor es.wikipedia.org, utilizando 192.168.5.1 como proxy</span>
+<span style="color: #008000">export </span><span style="color: #19177C">http_proxy</span><span style="color: #666666">=</span>192.168.5.1:3128
+<span style="color: #008000">export </span><span style="color: #19177C">https_proxy</span><span style="color: #666666">=</span>192.168.5.1:3128
+wget es.wikipedia.org
+
+<span style="color: #408080; font-style: italic">#Establecer 192.168.5.1 como proxy de forma permanente para wget y el usuario actual</span>
+<span style="color: #008000">echo export </span><span style="color: #19177C">http_proxy</span><span style="color: #666666">=</span>192.168.5.1:3128 &gt;&gt; <span style="color: #19177C">$HOME</span>/.bashrc
+<span style="color: #008000">echo export </span><span style="color: #19177C">https_proxy</span><span style="color: #666666">=</span>192.168.5.1:3128 &gt;&gt; <span style="color: #19177C">$HOME</span>/.bashrc
+</pre></div>

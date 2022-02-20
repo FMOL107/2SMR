@@ -1,0 +1,9 @@
+***Ventajas de SSH con contraseña:***
+
+ - Viene configurado por defecto.
+
+***Ventajas de SSH sin contraseña:***
+
+ - No hay que recordar contraseñas
+
+ - Es más seguro ya que usa criptografia de clave pública.

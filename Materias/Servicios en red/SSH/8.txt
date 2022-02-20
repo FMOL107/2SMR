@@ -1,0 +1,5 @@
+Ejecutando el siguiente comando desde la maquina real escribimos el puerto que queramos abrir sobre la interfaz de loopback, a continuación ponemos la IP destino y su respectivo puerto y por ultimo el usuario y su IP.
+
+ - ***ssh -L 5555:192.168.0.244:80 student@192.168.0.244***
+
+De esta forma al acceder a http://localhost:5555/ accederemos en realidad a http://192.168.0.244:80/.

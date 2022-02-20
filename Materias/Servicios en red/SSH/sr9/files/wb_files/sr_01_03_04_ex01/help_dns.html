@@ -1,0 +1,112 @@
+<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #408080; font-style: italic">#####################</span>
+<span style="color: #408080; font-style: italic"># Interfaces de red #</span>
+<span style="color: #408080; font-style: italic">#####################</span>
+
+<span style="color: #408080; font-style: italic">#EDIT /etc/network/interfaces (configurar los parámetros estáticos de la interfaz eth0: IP 192.168.5.240/24, gateway 192.168.5.1, servidores de nombres 192.168.5.1 y 8.8.8.8)</span>
+auto eth0
+iface eth0 inet static
+    address 192.168.5.240
+    netmask 255.255.255.0
+    gateway 192.168.5.1
+    dns-nameservers 192.168.5.1 8.8.8.8
+
+<span style="color: #408080; font-style: italic">#EDIT /etc/network/interfaces (configurar los parámetros de la interfaz eth0 utilizando un cliente DHCP)</span>
+auto eth0
+iface eth0 inet dhcp
+
+<span style="color: #408080; font-style: italic">#Deshabilitar y habilitar la interfaz de red eth0, configurando los parámetros establecidos en /etc/network/interfaces</span>
+ifdown eth0
+ifup eth0
+
+<span style="color: #408080; font-style: italic">######################</span>
+<span style="color: #408080; font-style: italic"># Enrutamiento y NAT #</span>
+<span style="color: #408080; font-style: italic">######################</span>
+
+<span style="color: #408080; font-style: italic">#EDIT /etc/sysctl.conf (establecer el reenvío de forma persistente)</span>
+net.ipv4.ip_forward<span style="color: #666666">=</span>1
+
+<span style="color: #408080; font-style: italic">#Cargar el contenido de /etc/sysctl.conf en la memoria del kernel</span>
+sysctl -p
+
+<span style="color: #408080; font-style: italic">#Establecer NAT a través de la interfaz eth0 (no es persistente)</span>
+iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+
+<span style="color: #408080; font-style: italic">#Hacer persistentes las reglas de iptables</span>
+apt-get install iptables-persistent
+iptables-save &gt; /etc/iptables/rules.v4
+
+<span style="color: #408080; font-style: italic">#Compruebar las reglas NAT</span>
+iptables -t nat -L
+
+<span style="color: #408080; font-style: italic">#######################</span>
+<span style="color: #408080; font-style: italic"># Servicio DNS y DHCP #</span>
+<span style="color: #408080; font-style: italic">#######################</span>
+
+<span style="color: #408080; font-style: italic">#Instalar Dnsmasq</span>
+apt-get install dnsmasq
+
+<span style="color: #408080; font-style: italic">#EDIT /etc/dnsmasq.conf (configurar la interfaz de red para que escuche en la interfaz eth0)</span>
+<span style="color: #19177C">interface</span><span style="color: #666666">=</span>eth0
+
+<span style="color: #408080; font-style: italic">#EDIT /etc/dnsmasq.conf (establecer 192.168.5.[20-29] como rango de direcciones IP que se ofrecerán, y tiempo de alquiler 24h)</span>
+dhcp-range<span style="color: #666666">=</span>192.168.5.20,192.168.5.29,24h
+
+<span style="color: #408080; font-style: italic">#EDIT /etc/dnsmasq.conf (ofrecer siempre la dirección IP 192.168.5.30 al host cuya dirección física es 11:22:33:44:55:66)</span>
+dhcp-host<span style="color: #666666">=</span>11:22:33:44:55:66,192.168.5.30
+
+<span style="color: #408080; font-style: italic">#EDIT /etc/dnsmasq.conf (establecer 192.168.5.1 como la dirección IP de la puerta de enlace que se ofrecerá)</span>
+dhcp-option<span style="color: #666666">=</span>option:router,192.168.5.1
+
+<span style="color: #408080; font-style: italic">#EDIT /etc/dnsmasq.conf (establecer 8.8.8.8 como la dirección IP del servicio DNS que se ofrecerá)</span>
+dhcp-option<span style="color: #666666">=</span>option:dns-server,8.8.8.8
+
+<span style="color: #408080; font-style: italic">#Archivo de log por defecto de Dnsmasq </span>
+cat /var/log/syslog
+
+<span style="color: #408080; font-style: italic">#Base de datos de alquileres de Dnsmasq</span>
+cat /var/lib/misc/dnsmasq.leases
+
+<span style="color: #408080; font-style: italic">#Verificar el servicio DNS configurado en el cliente</span>
+cat /etc/resolv.conf
+
+<span style="color: #408080; font-style: italic">#EDIT /etc/hosts (asignar nombres de dominio a direcciones IP)</span>
+192.168.5.1    host1
+192.168.5.30   hostN
+
+<span style="color: #408080; font-style: italic">#EDIT /etc/dnsmasq.conf (loguear consultas DNS)</span>
+log-queries
+
+<span style="color: #408080; font-style: italic">#Loguear el estado actual del servicio, incluyendo los datos en caché; para ello, enviar la señal SIGUSR1 al proceso dnsmasq </span>
+pkill --signal SIGUSR1 dnsmasq
+
+<span style="color: #408080; font-style: italic">################</span>
+<span style="color: #408080; font-style: italic"># Cliente DHCP #</span>
+<span style="color: #408080; font-style: italic">################</span>
+
+<span style="color: #408080; font-style: italic">#EDIT /etc/dhcp/dhclient.conf (configurar los parámetros de red que se solicitarán)</span>
+request subnet-mask, broadcast-address, <span style="color: #008000">time</span>-offset, routers,
+	domain-name, domain-name-servers, domain-search, host-name,
+	dhcp6.name-servers, dhcp6.domain-search, dhcp6.fqdn, dhcp6.sntp-servers,
+	netbios-name-servers, netbios-scope, interface-mtu,
+	rfc3442-classless-static-routes, ntp-servers;
+
+<span style="color: #408080; font-style: italic">#Para permitir que el cliente DHCP establezca el nombre de host, este no debe establecerse estáticamente</span>
+<span style="color: #008000">echo</span> &gt; /etc/hostname
+
+<span style="color: #408080; font-style: italic">#############</span>
+<span style="color: #408080; font-style: italic"># Navegador #</span>
+<span style="color: #408080; font-style: italic">#############</span>
+
+<span style="color: #408080; font-style: italic">#Descargar la página predeterminada del servidor es.wikipedia.org</span>
+wget es.wikipedia.org
+
+<span style="color: #408080; font-style: italic">###########</span>
+<span style="color: #408080; font-style: italic"># Captura #</span>
+<span style="color: #408080; font-style: italic">###########</span>
+
+<span style="color: #408080; font-style: italic">#Instalar la herramienta de captura de tráfico</span>
+apt-get install tcpdump
+
+<span style="color: #408080; font-style: italic">#Capturar encabezados enviados o recibidos a través de eth0</span>
+tcpdump -i eth0 &gt; capture.txt
+</pre></div>

@@ -1,0 +1,151 @@
+@font-face {
+    font-family: "Playfair Display";
+            src: url(./fonts/PlayFairDisplay/PlayfairDisplaySC-Regular.ttf)
+}
+@font-face {
+    font-family: "Merriweather";
+            src: url(./fonts/Merriweather/Merriweather-Regular.ttf)
+}
+body {
+    font-size: medium;
+    background-color: #b7ebaa;
+    display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: "up up up up"
+                             "menu menu menu aside"
+                             "principal principal principal aside"
+                             "footer footer footer footer";
+}
+nav {
+    background-color: #90ee90;
+    display: flex;
+    justify-content: space-between;
+    grid-area: menu;
+}
+nav a {
+    text-decoration: none;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+}
+nav a:hover {
+    background-color: #a8e4a0;
+}
+header {
+    padding: 30px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #c1f9a2;
+    grid-area: up;
+}
+h1, h2 {
+    font-family: "Bebas Neue";
+}
+li {
+    color: green;
+    font-family: "Merriweather";
+}
+img {
+    margin: 15px;
+    width: 200px;
+}
+aside {
+    grid-area: aside;
+    padding: 25px;
+}
+section {
+    display: flex;
+    grid-area: principal;
+}
+article#articlehtml {
+    width: 80%;
+}
+article#articlehtml img {
+    float: left;
+}
+article#images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+article#images img {
+    width: 130px;
+}
+footer {
+    grid-area: footer;
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size: medium;
+        background-color: #b7ebaa;
+        display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: "up up up up"
+                                 "menu menu menu menu"
+                                 "principal principal principal principal"
+                                 "aside aside aside aside"
+                                 "footer footer footer footer";
+    }
+    nav {
+        background-color: #90ee90;
+        display: flex;
+        justify-content: space-between;
+        grid-area: menu;
+    }
+    nav a {
+        text-decoration: none;
+        width: 100%;
+        padding: 15px;
+        text-align: center;
+    }
+    nav a:hover {
+        background-color: #a8e4a0;
+    }
+    header {
+        padding: 30px;
+        font-weight: bold;
+        text-align: center;
+        background-color: #c1f9a2;
+        grid-area: up;
+    }
+    h1, h2 {
+        font-family: "Bebas Neue";
+    }
+    li {
+        color: green;
+        font-family: "Merriweather";
+    }
+    img {
+        margin: 2px;
+        width: auto;
+    }
+    aside {
+        grid-area: aside;
+        padding: 25px;
+    }
+    section {
+        display: flex;
+        grid-area: principal;
+    }
+    article#articlehtml {
+        width: 35%;
+    }
+    article#articlehtml img {
+        margin-top: 15px;
+        float: left;
+        width: 50%;
+    }
+    article#images {
+        width: 65%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    article#images img {
+        width: 40%;
+    }
+    footer {
+        grid-area: footer;
+    }
+}
